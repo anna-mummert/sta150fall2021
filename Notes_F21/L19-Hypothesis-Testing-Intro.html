@@ -1,0 +1,297 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Hypothesis Testing Introduction - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Hypothesis Testing Introduction</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+  </section>
+
+
+  <!-- -------------------------------- -->
+  <!-- -------------------------------- -->
+  <section class="left">
+<h2>Hypothesis Testing</h2>
+
+<p> We compare a (sample) statistic to a pedetermined value.  We know the values are not the same.  We want to know if the difference is <i>signficant</i>.</p>
+<br>
+
+<p> The <b>null hypothesis</b> is that the difference in the numbers is due to chance.  Notation: $H_0$.
+
+<ul><li> The numbers are not really different.  The difference between the two numbers is 0.  </ul>
+
+<p> The <b>alternative hypothesis</b> (or research hypothesis) is that the difference is not due to chance.  The difference is significant.  Notation: $H_1$ (or $H_a$).
+<ul><li> The numbers are really different.  The difference between the two numbers is not 0.  </ul>
+</p>
+
+<br>
+<p> Use the sample data as evidence to support one of the two hypotheses.
+
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Null and Alternative Hypotheses</h2>
+
+<p> Write the null hypothesis as "the mean equals [value]"
+
+<p> The alternative hypothesis could be
+  <ul>
+  <li> "the mean is not equal to [value]"
+  <li> "the mean is greater than [value]"
+  <li> "the mean is less than [value]"
+  </ul>
+</p>
+
+<br>
+<p> Example: A medical trial is conducted to test wheter or not a new medicine reduces cholesterol by $25\%$.
+
+<p> Null hypothesis: the new medicine reduces cholsterol by $25\%$
+  \[H_0: \mu = 25\%\]
+
+  <p> Alternative hypothesis: the new medicine does not reduces cholsterol by $25\%$ \[H_1: \mu \neq 25\%\]
+
+
+</section>
+
+  <!-- -------------------------------- -->
+<section class="left">
+<h2>Outcomes</h2>
+
+<p> Use the sample data as evidence to support one of the two hypotheses.
+
+<p> Sample data supports the null hypothesis, we say
+<ul><li> Do not reject the null hypothesis.  Data does not suppport the claim of the alternative hypothesis.  </ul>
+
+<p> Sample data supports the alternative hypothesis, we say
+<ul><li> Reject the null hypothesis.  Data does suppport the claim of the alternative hypothesis.  </ul>
+
+
+  <ul>
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Evidence </h2>
+
+<p> Use the sample data as evidence to support one of the two hypotheses.
+
+<p> Compute the $z$ value for the sample mean $\overline{x}$ using the
+  <ul> <li> hypothesized value as the population mean $\mu$
+<li> the standard deviation of the sampling mean $\dfrac{\sigma}{\sqrt{n}}$
+</ul>
+\[z = (\overline{x} - \mu) / \left(\frac{\sigma}{\sqrt{n}}\right) \]
+
+<p> Compute the probability for the $z$-value
+  <ul> <li> probability large, then data supports null hypothesis ($\overline{x}$ and $\mu$ are close; hypothesized value $\mu$ is likely)
+<li> probability small, then data supports alternative hypothesis ($\overline{x}$ and $\mu$ are very different; hypothesized value is unlikely)
+</ul>
+
+  </section>
+
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+<p> The mean work week for engineers in a company is believed to be about 60 hours.  A newly hired engineer hopes that it's shorter.  The work week of 10 engineers from the company are
+  \[45 \quad 50 \quad 55 \quad 55 \quad 55 \quad 55 \quad 60 \quad 60 \quad 65\quad 70 \]
+Based on the data should the new engineer count on the mean work week to be shorter than 60 hours?
+
+<p> The length of engineer work weeks at this company is known to be normally distributed with a standard deviation of 6 hours.
+
+
+  </section>
+
+  <!-- -------------------------------- -->
+  <section class="left">
+  <h2>Example</h2>
+
+
+    \[45 \quad 50 \quad 55 \quad 55 \quad 55 \quad 55 \quad 60 \quad 60 \quad 65\quad 70 \]
+
+  <p> Find the sample average.   57 hours
+    <ul> <li> The sample average is less than the hypothesized 60 hours.  Is it significantly less?</ul>
+
+  <p> Null hypothesis: $H_0: \mu = 60$ hours
+
+<p> Alternative hypothesis: $H_1: \mu < 60$ hours
+
+<p> Compute the $z$-value
+  \[z = (57 - 60) / \left(\frac{6}{\sqrt{10}}\right) = -1.58 \]
+
+<p> Compute $P(z < -1.58)$ -- use the same "less than" as in the alternative hypothesis
+  \[ P(z < -1.58) = 0.0571 \]
+    </section>
+
+
+    <!-- -------------------------------- -->
+    <section class="left">
+    <h2>Example</h2>
+
+
+    <p> Null hypothesis: $H_0: \mu = 60$ hours
+
+  <p> Alternative hypothesis: $H_1: \mu < 60$ hours
+
+<p> We computed the probability as
+    \[ P(z < -1.58) = 0.0571 \]
+
+<p> Does the evidence support the null hypothesis (is $p$ large) or the alternative hypothesis (is $p$ small)?
+
+<p> Typically,  you have in mind a preset "level of significance" $\alpha$ that you compare your $p$-value against.
+<ul>
+<li>  If $p > \alpha$ then data supports null hypothesis (do not reject the null hypothesis).
+<li>If $p < \alpha$ then data supports alternative hypothesis (reject the null hypothesis).
+</ul>
+      </section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>One-sided and Two-sided Tests </h2>
+
+<p> One-sided test -- the alternative hypothesis is "less than" or "greater than".
+<ul> <li> For "less than", read the $p$-value directly from the $Z$ table
+  <li> For "greater than", find the probability and subtract : $1 - p$.
+</ul>
+
+<p> Two-sided test -- the alternative hypothesis is "not equal to"
+  <ul> <li> If $z < 0$, find the probability and multiply by 2 : $2p$.
+    <li> If $z > 0$, find the probability, subtract, and multiply by 2 : $2(1-p)$.
+  </ul>
+</p>
+
+<br>
+<p> Hypothesis testing SPSS
+  <ul> <li> Always uses the Student's t-test (assumes population standard deviation unknown)
+    <li> Always gives two sided $p$-value.
+      <ul> <li> Divide the two sided value by 2, to get the one-sided value
+      </ul>
+  </ul>
+
+  </section>
+
+  <!-- -------------------------------- -->
+
+  <section class="left">
+  <h2>Check your understanding</h2>
+
+  <p>Write the null and alternative hypotheses for each scenario.</p>
+
+  <ul>
+  <li>We want to test whether the mean height of eighth graders is 66 inches.
+
+  <ul class="fragment spaced">
+    <li class="green"> Null hypothesis: The mean height of eighth graders is 66 inches.  $H_0: \mu = 66$ inches</li>
+    <li class="green"> Alternative hypothesis: The mean height of eighth graders is not 66 inches.  $H_1: \mu \neq 66$ inches</li>
+  </ul>
+
+  <li>We want to test if college students take less than five years to graduate from college, on the average.
+
+  <ul class="fragment spaced">
+    <li class="green"> Null hypothesis: On average, college students take five years to graduate from college.  $H_0: \mu = 5$ years</li>
+    <li class="green"> Alternative hypothesis: On average, college students take less than five years to graduate from college.  $H_1: \mu < 5$ years</li>
+  </ul>
+
+
+
+    </ul>
+
+  </section>
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li> State the null and alternative hypotheses for hypothesis tests
+<li> Describe the general process for hypothesis testing
+<li> Compute $z$-value and $p$-values for one-sided and two-sided tests
+</ul>
+</p>
+
+<br>
+
+  <h2>Reading</h2>
+
+<p>  Textbook section 9.1: Null and Alternative Hypotheses </p>
+
+<p>  Textbook section 9.3: Distribution Needed for Hypothesis Testing </p>
+
+<p>  Textbook section 9.4: Rare Events, the Sample, Decision and Conclusion </p>
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
