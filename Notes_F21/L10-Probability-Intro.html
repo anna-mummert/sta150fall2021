@@ -1,0 +1,303 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Probability - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Probability</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Probability</h2>
+
+<p> Probability is a mathematical tool used to study randomness.</p>
+
+<p> Probability is a measure associated with how certain we are of an outcome of a particular experiment (activity, event).  </p>
+
+<p> Probabilities give us a systematic approach to "guess" about the outcome of an event in order to make a decision.</p>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Experiment</h2>
+
+<p>A random exeriment is a procedure to obtain an outcome from a collection of possible outcomes.</p>
+
+<p> The set of all possible outcomes is the sample space.</p>
+
+<ul class="spaced">
+<li> In some cases you can write out all possible outcomes.
+  <ul> <li>Flip two coins - the possible outcomes are (head, head), (head, tail), (tail, head), (tail, tail).
+  </ul>
+</li>
+<li> In some cases you cannot list all possible outcomes.
+<ul> <li>Similar to sampling -- too many individuals, too expensive  </li>
+</ul>
+</li>
+</ul>
+
+<p> An event is the set of outcomes you are interested in.
+  <ul> <li>What is the probability that when I flip two coins, the result is one head and one tail? (head,tail) or (tail,head)  </li>
+  </ul>
+</p>
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Probability</h2>
+
+<p>A probability is a number between 0 and 1 that tells you how often an event will happen if you peform the experiment many times, the long-term relative frequency.</p>
+
+<p>
+<ul>
+<li> Probabiliy 0 means the event never happens
+<li> Probabilities closer to 0 mean the event happens less often
+  <li> Probabilities closer to 1 mean the event happens more often
+  <li> Probability 1 means the even always happens
+</ul>
+</p>
+
+<p>If you can write out all possible outcomes, then you can compute the theoretical (exact) probability of an event.  </p>
+
+<p> If you cannot list all possible outcomes, you need to compute the long-term relative frequency of the event.  Estimate probability of population from sample probability. </p>
+
+
+</section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>OR events</h2>
+
+<p>In mathematics, "or" means one, or the other, or both.</p>
+
+<p> An outcome is in the event "A or B" if the outcome is in A, or the outcome is in B, or the outcome is in both A and B.  </p>
+
+<p> Example -- A student at Marshall is a first-generation student (A) or a first year student (B).
+
+<p> Caution!  Very often in English "or" means "exclusive or" -- one or the other, but not both.
+
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>And events</h2>
+
+<p> An outcome is in the event "A and B" if the outcome is in both A and B at the same time.  </p>
+
+<p> Example -- A student at Marshall is a first-generation student (A) and a first year student (B).
+
+</section>
+
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Multiplication Principle</h2>
+
+<p> A compound experiment $E$ is a larger experiment consisting of two smaller experiments $E_1$ and $E_2$ that do not affect each other.
+</p>
+
+<p> The number of outcomes of $E$ is the product of the number of outcomes of $E_1$ and the number of outcomes of $E_2$.  </p>
+
+<p>Example -- $E_1$ flip one coin, $E_2$ flip a second coin.
+<ul>
+  <li> The result of either coin has no affect on the other coin.
+  <li> $n_1 = 2$ and $n_2 = 2$, so the compound experiment has $n = 4$ possible outcomes
+    <ul> <li>Flip two coins - the possible outcomes are (head, head), (head, tail), (tail, head), (tail, tail).
+    </ul>
+</ul>
+
+
+</section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Complement events</h2>
+
+<p>The complement of event A consists of all outcomes that are not in A.  </p>
+
+<p>Example -- event A is "roll a 5 or 6" when rolling one six-sided die.  The complement is "roll a 1, 2, 3, or 4" (anthing but a 5 or 6).
+
+<p> Example - a Marshall student is a first year student.  The complement event is "a student is not a first year student".
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>General Probability Formula</h2>
+
+\[\text{Probability of an event} = \frac{\text{Number of outcomes in the event}}{\text{Total number of possible outcomes}} \]
+<br>
+
+<p> What is the probability a Marshall student is an undergraduate student?
+
+<p> Experiment -- determine the undergrad / grad status of each student
+
+<p> Outcome of interest -- undergraduate
+
+<p> In Fall 2019, Marshall had a total of 12,862 students (https://www.marshall.edu/quick-facts/, Accessed 2021.07.05) of which 9,422 were undergraduates.
+
+<p> The probability that a randomly selected student at Marshall, in fall 2019, was an undergraduate is
+  \[P = \frac{9,422}{12,862} = 0.733 = 73.3\% \]
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+  <h2>Law of Large Numbers</h2>
+
+  <p>The law of large numbers states that as the number of repetitions of an experiment is increased, the relative frequency obtained in the experiment becomes closer to the theoretical probability.</p>
+
+<p> Example -- Roll one six-sided die.
+
+<p> The theoretical probability of rolling a 1 (or any other number) is 1/6.
+
+<p> If you roll a six-sided die <b>a lot</b>, the relative frequency will be close to 1/6.
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+      <h2>Check your understanding</h2>
+
+      <p>True or False.</p>
+
+      <ul>
+      <li>An event with probability 0 will never happen.
+
+      <ul class="fragment spaced">
+        <li class="green">True
+      </ul>
+
+      <li>An event with probability larger than 0 is guaranteed to happen (will certainly happen).
+
+      <ul class="fragment spaced">
+        <li class="green">False
+      </ul>
+
+      <li> An event A that has a larger probability than event B is more likely to happen.
+
+        <ul class="fragment spaced">
+      <li class="green">True
+        </ul>
+
+
+      <li>Given a data set, the relative frequency of an event is the probability of the event.
+
+        <ul class="fragment spaced">
+      <li class="green">True
+        </ul>
+
+        <li>You could find an event that has probability 3.
+
+          <ul class="fragment spaced">
+        <li class="green">False
+          </ul>
+
+        </ul>
+
+      </section>
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li> Define experiment, outcome, sample space, event
+<li> Define probability, list its basic properties
+<li> Define or, and, complement events
+<li> Use the multiplication principle
+<li> Compute probabilities using the general probability formula
+<li> Describe the law of large numbers
+</ul>
+</p>
+
+<br>
+
+  <h2>Reading</h2>
+
+<p>  Textbook section 3.1: Terminology </p>
+
+<p> Textbook section 3.2: Independent and Mutually Exclusive Events </p>
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
