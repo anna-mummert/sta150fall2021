@@ -1,0 +1,359 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+
+    table.right tr td { text-align: right; }
+
+  </style>
+
+  <title>Percentiles - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Percentiles and five number summaries</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Percentiles</h2>
+
+<p>We have looked at the mean and standard deviation.</p>
+
+<p>Today we will look at another way of analyzing the spread
+of data, using percentiles.<p>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Percentiles</h2>
+
+<p>The median is the 50th percentile - half the data is
+less than or equal to the median.<p>
+
+<p>Other percentiles are defined the same way:</p>
+
+<ul class="spaced">
+<li>The 25th percentile is the data point which is greater than
+or equal to 25% of the data.
+<li>The 75th percentile is the data point which is greater than
+or equal to 75% of the data.
+<li>The 90th percentile is the data point which is greater than
+or equal to 90% of the data.
+<li>And so on...
+</ul>
+
+<p>The maximum element is the 100th percentile</p>
+
+<p>We define the 0th percentile to be the minimum element</p>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Finding 25th and 75th percentiles</h2>
+
+<p>The 25th and 75th percentiles can be found with a simple
+method.</p>
+
+<p>This data set has 15 elements:</p>
+<center>
+<p style="font-size: 150%">3 3 3 4 6 7 8  <b>8</b> 9 10 10 11 12 13 13</p>
+</center>
+
+<p>The median is 8.</p>
+
+<p>To find the 25th percentile, find the median of the data that is
+<em>below</em> the median. This will be 4.</p>
+
+<p>To find the 75th percentile, find the median of the data that
+is <em>above</em> the median. This is 11.</p>
+
+<p>We don't use the median data point in these calculations.</p>
+
+<p>There are other conventions for these, but we will follow
+this one when we do hand calculations. SPSS will give slightly
+different answers.</p>
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Quartiles</h2>
+
+<p>The <em>quartiles</em> values of a data set divide it into four parts,
+each of which has about the same number of data points.</p>
+
+<ul>
+<li>Q0 - the minimum
+<li>Q1 - the 25th percentile value or <em>lower quartile</em>
+<li>Q2 - the median
+<li>Q3 - the 75th percentile value or <em>upper quartile</em>
+<li>Q4 - the maximum
+</ul>
+
+<p>These five numbers are called the <em>five number summary</em>
+of the data.</p>
+
+<p>The <em>interquartile range</em> (IQR) is the difference between
+Q1 and Q3. </p>
+
+<p>The IQR is another measure of variation - it tells how much
+the data is spread out.</p>
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Box plots</h2>
+
+<p>Box plots are a way to visualize the five number summary.</p>
+
+<img src="Figures/Boxplot.png"></img>
+
+<p>These are also called <em>box and whisker plots</em></p>
+
+<p>They are most useful when used to compare several data sets.</p>
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+      <h2>Check your understanding</h2>
+
+      <p>Identify the five-number summary and any outliers of the data shown in the box plot.</p>
+
+<img src = "Figures/Boxplot_Prenatal.png" width=75%></img>
+
+<p>
+      <ul>
+      <li>Five-number summary
+
+      <ul class="fragment spaced">
+        <li class="green">Min (Q0) = 1; Q1 = 6; Median (Q2) = 7; Q3 = 8; Max (Q5) = 12
+      </ul>
+
+      <li>Outliers
+
+      <ul class="fragment spaced">
+        <li class="green">Small outlier at 1; Large outlier at 12
+      </ul>
+
+
+
+
+        </ul>
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Finding other percentiles</h2>
+
+<p>There is a way to find any percentile in a data set.</p>
+
+<ul>
+<li>Write the percentile as a decimal.
+<li>Multiply by the size of the data set ($n$)
+<li>Round up. Take this data point.
+</ul>
+
+<div class="fragment">
+<p>For example, let's find the 30th and 90th percentiles
+of this data set with $n = 15$.</p>
+
+<center>
+<p style="font-size: 150%">3 3 3 4 6 7 8 8 9 10 10 11 12 13 13</p>
+</center>
+
+<ul class="spaced">
+<li>30th percentile: $0.3 \times 15 = 4.5$. So we take the 5th data point,
+6. This is the first data point that is greater than or equal to 30
+percent of the data.</li>
+<li>90th percentile: $0.9 \times 15 = 13.5$. So we take the 14th data point, 13.
+This is the first data point that is greater than or equal to 90
+percent of the data.</li>
+</ul>
+
+</div>
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Using IQR to detect outliers</h2>
+
+<p>The interquarticle range is Q3 - Q1. It tells how much the middle
+half of the data is spread out.</p>
+
+<p>SPSS uses the IQR to detect outliers.</p>
+
+<p>Data that is more than 1.5 IQR above Q3, or more than 1.5 IQR below
+Q1, is considered an outlier.</p>
+
+<p>This is not a perfect test, because it does not take the meaning
+of the data into account.</p>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Box plots and Histograms</h2>
+
+<p>Box plots and histograms both display quantitiative data.</p>
+
+<p> Both help you visually assess central tendancy, variation, and outliers.  </p>
+
+<p> Use histograms to see the distribution of your data - peaks, gaps, distribution of frequencies.  </p>
+
+
+<p> Use box plots to compare several data sets.  Outliers and the five-number summary are clearly indicated.</p>
+
+      </section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Unimodal - one peak</h2>
+<p>$N = 500$, $\overline{x} = 2.07$, $s = 1.01$, median$= 2.00$, mode is near tallest bar (center)</p>
+
+<img src="Figures/SymmetricUnimodal1.png" width="80%" height="200"></img>
+
+<img src="Figures/SymmetricUnimodal_Boxplot.png" width="80%" height="300"></img>
+
+</section>
+
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Bimodal - two peaks</h2>
+<p>$N = 500$, $\overline{x} = -0.99$, $s = 3.40$, median$= -0.28$</p>
+
+<p> Two modes - near each of the two tallest bars</p>
+
+<img src="Figures/Bimodal.png" width="80%" height="200"></img>
+
+<img src="Figures/Bimodal_Boxplot.png" width="80%" height="300"></img>
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Left Skewed</h2>
+<p>$N = 500$, $\overline{x} = 1.83$, $s = 0.64$, median$= 1.96$, mode is near tallest bar</p>
+
+<img src="Figures/LeftSkewed.png" width="80%" height="200"></img>
+
+<img src="Figures/LeftSkewed_Boxplot.png" width="80%" height="300"></img>
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Right Skewed</h2>
+<p>$N = 500$, $\overline{x} = 1.20$, $s = 0.65$, median$= 1.06$, mode is near tallest bar</p>
+
+
+<img src="Figures/RightSkewed.png" width="80%" height="200"></img>
+
+<img src="Figures/RightSkewed_Boxplot.png" width="80%" height="300"></img>
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Uniform</h2>
+<p>$N = 500$, $\overline{x} = 0.51$, $s = 0.29$, median$= 0.48$, no mode</p>
+
+<img src="Figures/SymmetricUniform1.png" width="80%" height="200"></img>
+
+<img src="Figures/SymmetricUniform_Boxplot.png" width="80%" height="300"></img>
+
+</section>
+
+
+
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+<p>
+<ul>
+<li>Understand the meaning of percentiles
+<li>Understand the elements of the five number summary: min, Q1, median, Q3, max
+<li>Compute the five number summary
+<li>Read a box plot
+<li>Compute the IQR and describe how SPSS uses it to detect outliers
+<li>Compute arbitrary percentiles from a data set
+<li> Understand when to use histograms and boxplots
+</ul>
+</p>
+
+<br>
+  <h2>Reading</h2>
+
+  <p>  Textbook section 2.3: Measures of the Location of the Data
+  </p>
+
+<p>  Textbook section 2.4: Box plots
+</p>
+
+      </section>
+
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
