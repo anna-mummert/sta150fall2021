@@ -1,0 +1,335 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Expected Value - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Expected Value</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>discrete Random Variable</h2>
+
+<p>A discrete random variable is a random process that has a finite number of outcomes, each of which is a number. </p>
+
+<br>
+<p> Example
+
+<p> Roll a die and record the number that comes up.
+
+<p> For each class, record your grade earned.
+
+</section>
+
+  <!-- -------------------------------- -->
+<section class="left">
+<h2>Probability Distribution</h2>
+
+<p> The probabilities of all outcomes of an event have to add to 1.
+
+<p> The collection of all outcomes and their probabilities is called a discrete probability distribution.
+
+</section>
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Expected Value </h2>
+
+<p> The expected value is a weighted average of all the outcomes.
+
+
+
+<ul>
+  <li> Multiply each outcome by its probability
+<li> Add up these products -- this is the expected value
+</ul>
+
+<p> The expected value is what we would get if we measured the random variable many times and then averaged our results.
+</section>
+
+<!-- -------------------------------- -->
+      <section class="left">
+	<h2>Notation</h2>
+
+<p> $E(x)$ is the expected value of random variable $x$.
+
+<p> The formula for expected value is
+  \[ E(x) = \sum x P(x) \]
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Example </h2>
+
+<p> Find the expected number of pre-natal visits that a woman will make.
+
+<p> Data from a random sample of 50 mothers (from the Natality 2019 data) is given here.
+
+<p>
+<table>
+<tr>
+  <th> Visits </th>
+  <td> 1 </td>
+  <td> 4 </td>
+  <td> 5 </td>
+  <td> 6 </td>
+  <td> 7 </td>
+  <td> 8 </td>
+  <td> 9 </td>
+  <td> 10 </td>
+  <td> 11 </td>
+  <td> 12 </td>
+</tr>
+<tr>
+  <th> Probability </th>
+  <td> $\dfrac{1}{50}$ </td>
+  <td> $\dfrac{2}{50}$ </td>
+  <td> $\dfrac{7}{50}$ </td>
+  <td> $\dfrac{8}{50}$ </td>
+  <td> $\dfrac{13}{50}$ </td>
+  <td> $\dfrac{9}{50}$ </td>
+  <td> $\dfrac{3}{50}$ </td>
+  <td> $\dfrac{2}{50}$ </td>
+  <td> $\dfrac{3}{50}$ </td>
+  <td> $\dfrac{2}{50}$ </td>
+</tr>
+</table>
+
+<br>
+<p> First notice that this is a valid probability distribtion because the probabilities add to 1.
+</section>
+
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example </h2>
+
+<p> Multiply (value) * (probability)
+
+
+<p>
+<table>
+<tr>
+<th> Visits, x </th>
+<td> 1 </td>
+<td> 4 </td>
+<td> 5 </td>
+<td> 6 </td>
+<td> 7 </td>
+<td> 8 </td>
+<td> 9 </td>
+<td> 10 </td>
+<td> 11 </td>
+<td> 12 </td>
+</tr>
+<tr>
+<th> Probability, P(x) </th>
+<td> $\dfrac{1}{50}$ </td>
+<td> $\dfrac{2}{50}$ </td>
+<td> $\dfrac{7}{50}$ </td>
+<td> $\dfrac{8}{50}$ </td>
+<td> $\dfrac{13}{50}$ </td>
+<td> $\dfrac{9}{50}$ </td>
+<td> $\dfrac{3}{50}$ </td>
+<td> $\dfrac{2}{50}$ </td>
+<td> $\dfrac{3}{50}$ </td>
+<td> $\dfrac{2}{50}$ </td>
+</tr>
+<tr>
+<th> x * P(x) </th>
+<td> $\dfrac{1}{50}$ </td>
+<td> $\dfrac{8}{50}$ </td>
+<td> $\dfrac{35}{50}$ </td>
+<td> $\dfrac{48}{50}$ </td>
+<td> $\dfrac{91}{50}$ </td>
+<td> $\dfrac{72}{50}$ </td>
+<td> $\dfrac{27}{50}$ </td>
+<td> $\dfrac{20}{50}$ </td>
+<td> $\dfrac{33}{50}$ </td>
+<td> $\dfrac{24}{50}$ </td>
+</tr>
+</table>
+
+<br>
+<p> Add all the values
+  \[ E(x) = \sum xP(x) = \frac{359}{50} = 7.18\]
+</section>
+
+
+<!-- -------------------------------- -->
+
+<section class="left">
+<h2>Check your understanding</h2>
+
+<p>Determine if each of the following is a valid probability distribution.  If it is, find the expeced value.</p>
+
+<ul>
+<li>
+  <table>
+<tr>
+  <th>$x$
+  </th>
+  <td> $-5$
+  </td>
+  <td> $-3$
+  </td>
+  <td> $2$
+  </td>
+  <td> $10$
+  </td>
+</tr>
+<tr>
+  <th>$P(x)$
+  </th>
+  <td> 0.2
+  </td>
+  <td> 0.5
+  </td>
+  <td> 0.3
+  </td>
+  <td> 0.2
+  </td>
+</tr>
+  </table>
+
+<ul class="fragment spaced">
+  <li class="green">This is not a valid probability distribution because $\sum P(a) = 1.2$.  The probabilities must add to $1$.
+</ul>
+
+<li>
+  <table>
+<tr>
+  <th> $a$
+  </th>
+  <td> $-5$
+  </td>
+  <td> $-4$
+  </td>
+  <td> $10$
+  </td>
+</tr>
+<tr>
+  <th> $P(a)$
+  </th>
+  <td> 0.3
+  </td>
+  <td> 0.5
+  </td>
+  <td> 0.2
+  </td>
+
+</tr>
+  </table>
+
+<ul class="fragment spaced">
+  <li class="green">This is a valid probability distribution because $\sum P(a) = 1$.     </li>
+  <li class="green">The expected value is $-5*0.3 + -4*0.5 + 10*0.2 = -1.5$     </li>
+</ul>
+
+
+
+
+  </ul>
+
+</section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li> Define discrete random variable and discrete probability distribution
+<li> Determine if a table of values is a probability distribution
+<li> Compute expected values for discrete probability distributions
+</ul>
+</p>
+
+<br>
+
+  <h2>Reading</h2>
+
+<p>  Textbook section 4.2: Mean or Expected Value and Standard Deviation </p>
+
+
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
