@@ -1,0 +1,576 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Correlation - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Correlation and linear regression</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Correlation</h2>
+
+<p> In some data sets, we measure two factors from each individual:</p>
+
+<ul>
+<li>Height and weight of a person
+<li>Study time and exam grades of a student
+<li>Advertising expenses and the resulting sales revenue for several products
+<li>Drug dosage and the effect of the drug on each patient
+<li>Age of a person and their political beliefs
+</ul>
+
+<p>
+When a change in one of the two factors from one data point to another
+is associated with a change
+in the other factor, we call this <em>correlation</em>.
+</p>
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Positive correlation</h2>
+
+<p>In <em>positive correlation</em>, an increase in one variable
+leads to an increase in the other.</p>
+
+<ul class="spaced">
+<li> Foot size is larger for taller people
+<li> Ice cream sales go up as the temperature increases
+
+</ul>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Positive correlation</h2>
+
+<p>This data set shows positive correlation. </p>
+
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/figure/F3/"><img src="Figures/Corr-80.png" width=500></img></a>
+
+<p class="source">Source: MM Mukaka, "A guide to appropriate use of Correlation coefficient in medical research", Malawi Med J. 2012 Sep; 24(3): 69–71.
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/</a></p>
+
+</section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Negative correlation</h2>
+
+<p>In <em>negative correlation</em>, an increase in one variable
+leads to a decrease in the other.</p>
+
+<ul class="spaced">
+<li>Among students, as the number of absences increases, the average grade decreases
+<li>In the U.S., as temperature increases, heating costs decrease
+<li>As the amount of snow in a winter increases, the average amount of driving the winter decreases
+</ul>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Negative correlation</h2>
+
+<p>This data set shows negative correlation. </p>
+
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/figure/F4/"><img src="Figures/Corr-neg-80.png" width=500></img></a>
+
+<p class="source">Source: MM Mukaka, "A guide to appropriate use of Correlation coefficient in medical research", <br/>Malawi Med J. 2012 Sep; 24(3): 69–71.
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/</a></p>
+
+</section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Correlation and causation</h2>
+
+<p>Correlation only means that a change in one variable leads
+to a change in the other.  </p>
+
+<p>It does not mean that a change in one variable <em>causes</em>
+a change in the other.</p>
+
+<p>It could be that there is an underlying <em>hidden variable</em>
+that explains both of the variables we are looking at.</p>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Correlation and causation</h2>
+
+<p>A researcher finds that, as windmills turn faster, there is more wind.</p>
+
+<p>The researcher concludes that windmills can cause the wind to blow.<p>
+
+<p>What is wrong with this conclusion?</p>
+
+<div class="fragment">
+<p class="green">The researcher has switched the real cause and the real effect.
+</p>
+
+<p class="green">
+This example is obvious, but this mistake is easy to make in other
+situations.</p>
+</div>
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Correlation and causation</h2>
+
+<p>Among elementary school children there is a strong
+positive correlation between <br/>
+shoe size and reading ability.</p>
+
+<p>Why do you think this is?</p>
+
+<div class="fragment">
+<p class="green">In elementary school children,
+shoe size and reading ability are both strongly affected by
+age (and thus grade level). This is a hidden variable.</p>
+
+<p class="green">Shoe size alone probably has nothing to do with reading
+ability.</p>
+
+</div>
+
+      </section>
+
+
+
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Correlation and causation</h2>
+
+<p>In 1992, a study of 56,000 college students found that
+the more a student drinks alcohol, the lower the student's grades will be.
+<p>The data showed a strong negative correlation between drinking and grades</p>
+
+<p>Nevertheless we <em>can't</em> use this study alone
+to show that drinking
+<em>causes</em> lower grades.
+</p>
+
+
+<a href="https://www.psywww.com/intropsych/ch01-psychology-and-science/correlation-and-prediction.html">
+<img style="width: 400px" src="Figures/Corr-drinking.jpg"></img></a>
+<p class="source">Source:
+Correlation and causation, <br/><a href="https://www.psywww.com/intropsych/ch01-psychology-and-science/correlation-and-prediction.html">https://www.psywww.com/intropsych/ch01-psychology-and-science/correlation-and-prediction.html</a>
+</p>
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Correlation and causation</h2>
+
+<p>&ldquo;A correlation does not tell us about the underlying cause of
+a relationship. We do not know from the Illinois data whether drinking
+was correlated with lower grades because (1) alcohol makes people
+stupid, or (2) the students who tend to drink tend to be poorer students
+to begin with, or (3) people who are hung-over from a drinking binge
+tend to skip class, or (4) students in academic trouble drink in order
+to drown their sorrows, or some other reason. &rdquo;
+
+<p>&ldquo;There can be hundreds of
+possible explanations for a correlation: the number is limited only by
+your imagination and ingenuity in thinking up possible reasons for a
+relationship between two variables.&rdquo; </p>
+
+<p class="source">
+Source: Cristian S. Calude and Giuseppe Longo,
+&ldquo;<a href="https://link.springer.com/article/10.1007/s10699-016-9489-4">The Deluge of Spurious Correlations in Big Data</a>&rdquo;,
+<em>Foundations of Science</em>, 2017, Volume 22, Issue 3, pp 595–612.
+</p>
+</section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Correlation and causation: ethics</h2>
+
+<p style="font-size: 110%;"> Especially when we use
+correlations to understand people and their behaviour,<br/>
+we have to be aware of ethical issues.
+</p>
+
+<ul class="spaced">
+<li>Does the data measure what we want to measure?
+<li>What hidden variables may be responsible for
+some of the correlation that we see?
+<li>Are we looking at a cause/effect relationship,
+or at two effects of an underlying factor?
+<li>Are we using our pre-existing opinions to
+&lsquo;see what we want to see&rsquo; in the data?
+
+</ul>
+
+<p>When we that find two variables are correlated,
+this is a <em>starting point</em><br/>
+ for further
+thought and analysis.</p>
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Correlation coefficient </h2>
+
+<p>In statistics, we don't just want to <em>describe</em>
+relationships.</p>
+
+<p>We want to <em>quantify</em> them.</em>
+
+<p>There are several <em>correlation coefficients</em>
+that can be used.
+
+<p>These are numbers that measure the strength of a correlation.</p>
+
+<p>We will look at the most commonly used one.</p>
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Pearson's correlation coefficient </h2>
+
+<p>This number, called $r$, measures the strength of a correlation.</p>
+
+<p>The number is always between $-1$ and $1$.</p>
+
+<p>If $r$ is close to $1$, the assocation is nearly a line,
+and the correlation is positive.</p>
+
+<p>If $r$ is close to $-1$, the association is nearly a line,
+and the correlation is negative.</p>
+
+<p>If $r$ is close to $0$, there is no linear correlation.
+The data does not resemble a line.</p>
+
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Correlation coefficient </h2>
+
+<p>This data has $r = 0.2$.</p>
+
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/figure/F1/"><img src="Figures/Corr-20.png" width=500></img></a>
+
+<p class="source">Source: MM Mukaka, "A guide to appropriate use of Correlation coefficient in medical research", <br/>Malawi Med J. 2012 Sep; 24(3): 69–71.
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/</a></p>
+
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Correlation coefficient </h2>
+
+<p>This data has $r = 0.5$.</p>
+
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/figure/F2/"><img src="Figures/Corr-50.png" width=500></img></a>
+
+<p class="source">Source: MM Mukaka, "A guide to appropriate use of Correlation coefficient in medical research", <br/>Malawi Med J. 2012 Sep; 24(3): 69–71.
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/</a></p>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Correlation coefficient </h2>
+
+<p>This data has $r = 0.8$.</p>
+
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/figure/F3/"><img src="Figures/Corr-80.png" width=500></img></a>
+
+<p class="source">Source: MM Mukaka, "A guide to appropriate use of Correlation coefficient in medical research", <br/>Malawi Med J. 2012 Sep; 24(3): 69–71.
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/</a></p>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Correlation coefficient </h2>
+<p>This data has $r = -0.8$.</p>
+
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/figure/F4/"><img src="Figures/Corr-neg-80.png" width=500></img></a>
+
+<p class="source">Source: MM Mukaka, "A guide to appropriate use of Correlation coefficient in medical research", <br/>Malawi Med J. 2012 Sep; 24(3): 69–71.
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3576830/</a></p>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Interpreting correlation coefficients</h2>
+
+<p>Each discipline has rules of thumb for interpreting correlation coefficients.</p>
+
+<table class="right">
+<tr>
+<th colspan="2">Correlation
+<br/> Coefficient
+<th>Psychology
+<th>Politics
+<th>Medicine
+</tr>
+<tr>
+<td>+1
+<td>−1
+<td>Perfect
+<td>
+Perfect
+<td>Perfect
+</tr>
+
+<tr>
+<td>+0.9
+<td>−0.9
+<td>Strong
+<td>Very Strong
+<td>Very Strong
+</tr>
+
+<tr>
+<td>+0.8
+<td>−0.8
+<td>Strong
+<td>Very Strong
+<td>Very Strong
+</tr>
+
+<tr>
+<td>+0.7
+<td>−0.7
+<td>Strong
+<td>Very Strong
+<td>Moderate
+</tr>
+
+<tr>
+<td>+0.6
+<td>−0.6
+<td>Moderate
+<td>Strong
+<td>Moderate
+</tr>
+
+<tr>
+<td>+0.5
+<td>−0.5
+<td>Moderate
+<td>Strong
+<td>Fair
+</tr>
+
+<tr>
+<td>+0.4
+<td>−0.4
+<td>Moderate
+<td>Strong
+<td>Fair
+</tr>
+
+<tr>
+<td>+0.3
+<td>−0.3
+<td>Weak
+<td>Moderate
+<td>Fair
+</tr>
+
+<tr>
+<td>+0.2
+<td>−0.2
+<td>Weak
+<td>Weak
+<td>Poor
+</tr>
+
+<tr>
+<td>+0.1
+<td>−0.1
+<td>Weak
+<td>Negligible
+<td>Poor
+</tr>
+
+<tr>
+<td>0
+<td>0
+<td>Zero
+<td>None
+<td>None
+</tr>
+</table>
+
+<p class="source">Source:
+Haldun Akoglu, "<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6107969/">User's guide to correlation coefficients</a>",
+Turk J Emerg Med. 2018 Sep; 18(3): 91–93. doi: 10.1016/j.tjem.2018.08.001
+</p>
+      </section>
+
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Other types of correlation</h2>
+
+<p>There are other, more complicated kinds of correlation.
+The correlation coefficient does not measure them.</p>
+
+<img src="Figures/Corr-other.png"></img>
+
+<p class="source">Source:
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/">https://commons.wikimedia.org/wiki/File:Correlation_examples2.svg</a>
+</p>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Spurious correlations</h2>
+
+<p>The correlation coefficient only measures
+<em>correlation</em>. It does not measure whether
+either variable causes or affects the other. Some
+correlations are purely coincidental.</p>
+
+<img src="Figures/Marriage-drowning.png"></img>
+
+<p>For these data sets, $r = -0.95$</p>
+
+<p class="source">Source: Tyler Vigen, <a href="http://www.tylervigen.com/spurious-correlations">Spurious correlations</a>
+
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Conclusion</h2>
+
+<img style="width: 600px;" src="Figures/xkcd-correlation.png"></img>
+
+
+<p class="source">Source: <a href="https://xkcd.com/552/">xkcd 552</a>
+      </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li>Understand the concepts of positive and negative correlation
+<li>Understand the difference between correlation and causation
+<li>Understand the ethical issues affecting correlations
+<li>Understand Pearson's correlation coefficient and how to interpret it
+</ul>
+</p>
+<br>
+
+
+  <h2>Reading</h2>
+
+<p>  Textbook section 12.2: Scater Plots </p>
+
+<p> Textbook section 12.3: The Regression Equation </p>
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
