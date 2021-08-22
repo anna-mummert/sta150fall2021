@@ -1,0 +1,234 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Confidence Intervals for the Mean - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Confidence Intervals for the Mean</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+  </section>
+
+
+  <!-- -------------------------------- -->
+  <!-- -------------------------------- -->
+  <section class="left">
+<h2>Estimating the Mean </h2>
+
+
+  <p> We want to use the sample data to estimate the population mean.</p>
+
+<br>
+<p> The sample mean is a <b>point estimate</b> for the population mean.</p>
+
+<br>
+<p> We'll extend our point estimate to an interval of values called a <b>confidence interval</b>.
+
+<ul class = "spaced">
+<li> The confidence interval will be centered at the mean.
+
+<li> The confidence interval may or may not actually contain the population mean.
+
+<li> If we could repeatedly take samples, compute the confidence intervals, then most of the confidence intervals should contain the population mean.
+</ul>
+
+  </section>
+
+  <!-- -------------------------------- -->
+<section class="left">
+<h2>Assumptions</h2>
+
+<p> Sample size $n$ and population standard deviation is $\sigma$
+
+<p> Assume either (1) the population is normally distributed or (2) $n \geq 30$
+
+<p> The sampling distribution has mean $\mu$ and standard deviation $\dfrac{\sigma}{\sqrt{n}}$
+
+
+</section>
+
+  <!-- -------------------------------- -->
+<section class="left">
+<h2>Centered Regions</h2>
+
+<p> The confidence interval will be centered at the sample mean $\overline{x}$.
+
+<p> We're looking for centered regions on a normal distribution (sampling distribution is normal).
+
+<p> We'll find the <b>critical value</b> $c$ (or $z_c$), and the interval will be of the form
+  \[P(-c < z < c) \]
+
+<p> Convert the interval of $z$ values to an interval of $x$ values
+
+<p> The <b>margin of error</b> is
+  \[E = z_c \left(\frac{\sigma}{\sqrt{n}} \right) \]
+
+<p> The confidence interval is $(\overline{x} - E, \overline{x}+E)$
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example </h2>
+
+<p> We previously found that the critical value for $85\%$ confidence level is $z_c = 1.44$.
+
+<p> Suppose we know a distribution is normal and has a standard deviation of 5.
+
+<p> We take a sample of size 49, and our sample average is 37.
+
+<p> Here's what we can say
+<ul class="spaced">
+<li> The point estimate for the population mean is 37.
+
+<li> The margin of error for $85\%$ confidence interval is
+  \[E = 1.44 \left(\frac{5}{\sqrt{49}}\right) = 1.02 \]
+<li> The $85\%$ confidence interval is $(37 - 1.02, 37 + 1.02)$, that is
+\[(35.98, 38.02) \]
+</ul>
+
+
+  </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Confidence Interval Meaning</h2>
+
+<p> If we could repeatedly take samples, compute the confidence intervals, then most of the confidence intervals should contain the population mean.
+
+<p> Every confidence interval will have the same width (because the sample size is the same $n$)
+
+<p> For our $85\%$ confidence interval, we say
+<ul class = "spaced">
+<li>  We are $85\%$ confident that the unknown population mean is between 35.98 and 38.02.
+
+<li>  $85\%$ of confidence intervals will contain the true population mean.
+
+<li>  $1 - 85\% = 15\%$ of confidence intervals will not contain the true population mean.
+</ul>
+</section>
+
+<!-- -------------------------------- -->
+
+<section class="left">
+<h2>Check your understanding</h2>
+
+<ul>
+<li>A data set has sample mean $\overline{x} = 15$ and $95\%$ margin of error $E = 3.2$.  Find the $95\%$ confidence interval.
+
+<ul class="fragment spaced">
+  <li class="green"> $(15 - 3.2 , 15 + 3.2) = (11.8, 18.2)$
+</ul>
+
+
+<li>True or false: With all other things equal, if your confidence level is larger, then the margin of error will be larger, too.
+
+  <ul class="fragment spaced">
+<li class="green">True
+  </ul>
+
+  <li>True or false: With all other things equal, if your standard deviation is larger, then the margin of error will be larger, too.
+
+  <ul class="fragment spaced">
+    <li class="green">True
+  </ul>
+
+
+  <li>True or false: With all other things equal, if your sample size is larger, then the margin of error will be larger, too.
+
+  <ul class="fragment spaced">
+    <li class="green">False
+  </ul>
+
+
+  </ul>
+
+</section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li> Compute the margin or error and confidence intervals
+<li> Explain the meaning of the confidence interval
+</ul>
+</p>
+<br>
+
+
+  <h2>Reading</h2>
+
+<p>  Textbook section 8.1: A Single Population Mean using the Normal Distribution </p>
+
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
