@@ -1,0 +1,277 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Estimating the Mean - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Estimating the Mean</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+  </section>
+
+
+  <!-- -------------------------------- -->
+  <!-- -------------------------------- -->
+  <section class="left">
+<h2>Estimating the Mean </h2>
+
+
+  <p> We want to use the sample data to estimate the population mean.</p>
+
+<br>
+<p> The sample mean is a <b>point estimate</b> for the population mean.</p>
+
+<br>
+<p> We'll extend our point estimate to an interval of values called a <b>confidence interval</b>.
+
+<ul class = "spaced">
+<li> The confidence interval will be centered at the mean.
+
+<li> The confidence interval may or may not actually contain the population mean.
+
+<li> If we could repeatedly take samples, compute the confidence intervals, then most of the confidence intervals should contain the population mean.
+</ul>
+
+  </section>
+
+  <!-- -------------------------------- -->
+<section class="left">
+<h2>Central Limit Theorem</h2>
+
+<p> From a population, take a sample of size $n$.  Compute the mean.
+  <ul> <li>The mean of the sample is a new "individual" in a new population
+</ul>
+<p> Repeatedly take samples of size $n$; compute the means.
+
+<p> The set of all the sample means (all the individuals in the population) forms the sampling distribution.
+
+<p> The mean and standard deviation of the original population and the sampling distribution are related
+  <ul>
+    <li> Population mean $\mu$, standard deviation $\sigma$
+    <li> Sampling distribution mean $\mu$, standard deviation $\dfrac{\sigma}{\sqrt{n}}$
+</ul>
+
+<p> If the original population is normally distributed <b>or</b> the sample size $n \geq 30$
+  <ul> <li>The sampling distribution will be normally distributed
+</ul>
+</section>
+
+  <!-- -------------------------------- -->
+<section class="left">
+<h2>Centered Regions</h2>
+
+<p> The confidence interval will be centered at the mean.
+
+<p> We're looking for centered regions on a normal distribution (sampling distribution is normal).
+
+<p> We'll find the <b>critical value</b> $c$, and the interval will be of the form
+  \[P(-c < z < c) \]
+
+<p> Usually we pick $c$ so that $90\%$ or $95\%$ of the data is in the region.
+
+\[P(-c < z < c) = 0.9 \quad \text{or}\quad P(-c < z < c) = 0.95  \]
+
+<p> Notation: $c$ is a $z$ value; it can be written as $z_c$</p>
+<br>
+</section>
+
+<section class="left">
+<h2>Check your understanding</h2>
+
+<p>Find the exact areas (probabilities) of these centered regions. Use a $Z$ table. </p>
+
+<ul>
+<li>The boundaries of a centered region are one standard deviation from mean.
+
+<ul class="fragment">
+  <li class="green">$z = -1$ has $P(z < -1) = 0.1587$</li>
+  <li class="green">area of both tails is $2 * 0.1587 = 0.3174$</li>
+  <li class="green">inside centered region (area not in tails) $A = 1- 0.3174 = 0.6826$
+</ul>
+
+<li>The boundaries of a centered region are two standard deviation from mean.
+
+  <ul class="fragment">
+    <li class="green">$z = -2$ has $P(z < -2) = 0.0228$</li>
+    <li class="green">area of both tails is $2 * 0.0228 = 0.0456$</li>
+    <li class="green">inside centered region (area not in tails) $A = 1- 0.0456 = 0.9544$
+  </ul>
+
+<li>The boundaries of a centered region are three standard deviation from mean.
+
+  <ul class="fragment">
+    <li class="green">$z = -3$ has $P(z < -3) = 0.0013$</li>
+    <li class="green">area of both tails is $2 * 0.0013 = 0.0026$</li>
+    <li class="green">inside centered region (area not in tails) $A = 1- 0.0026 = 0.9974$
+  </ul>
+
+
+  </ul>
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Critical Value</h2>
+
+<p>Calculating $c$ so region has area $A$
+  <ul>
+    <li> Compute \[ \frac{1-A}{2}\]
+    <li> Find the $z$ value that corresponds to this number; this is $-c$
+  </ul>
+</p>
+
+<p> Example: Find the boundaries of a centered region with area $A = 85\%$.
+
+<p>Compute \[ \frac{1-0.85}{2} = 0.075\]
+
+<p>Look up $z$ value: $z = -1.44$
+
+<p>Thus, $c = 1.44$ and the boundaries are $\pm 1.44$
+
+  </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Approximate Critical Values</h2>
+
+<p> Find the boundaries of a centered region with area $A = 68\%$
+<ul> <li>$c = 1$; boundaries $\pm 1$ -- one standard deviation
+</ul>
+
+<p> Find the boundaries of a centered region with area $A = 95\%$
+<ul> <li>$c = 2$; boundaries $\pm 2$ -- two standard deviation
+</ul>
+
+<p> Find the boundaries of a centered region with area $A = 99.7\%$
+<ul> <li>$c = 3$; boundaries $\pm 3$ -- three standard deviation
+</ul>
+
+</section>
+
+<!-- -------------------------------- -->
+
+<section class="left">
+<h2>Check your understanding</h2>
+
+<p>Compute the exact critical values.</p>
+
+<ul>
+<li>Find the boundaries of a centered region with area $A = 68\%$.
+
+<ul class="fragment spaced">
+  <li class="green">$(1 - 0.68) / 2 = 0.16$; from table $z = -0.99$</li>
+  <li class="green">boundaries are $\pm 0.99$
+</ul>
+
+<li>Find the boundaries of a centered region with area $A = 95\%$.
+
+  <ul class="fragment spaced">
+    <li class="green">$(1 - 0.95) / 2 = 0.025$; from table $z = -1.96$</li>
+    <li class="green">boundaries are $\pm 1.96$
+  </ul>
+
+<li>Find the boundaries of a centered region with area $A = 99.7\%$.
+
+  <ul class="fragment spaced">
+    <li class="green">$(1 - 0.997) / 2 = 0.0015$; from table $z = -2.96$ (or $z = -2.97$)</li>
+    <li class="green">boundaries are $\pm 2.96$ (or $\pm 2.97$)
+  </ul>
+
+
+  </ul>
+
+</section>
+
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li> Define and compute the point estimate for the population mean
+<li> State the central limit theorem
+<li> Compute centered regions and critical values
+</ul>
+</p>
+
+<br>
+
+  <h2>Reading</h2>
+
+<p>  Textbook section 8.1: A Single Population Mean using the Normal Distribution </p>
+
+<p>  Textbook section 7.1: The Central LImit Theorem for Sample Means (Averages) </p>
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
