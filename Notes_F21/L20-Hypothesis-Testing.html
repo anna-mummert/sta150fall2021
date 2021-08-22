@@ -1,0 +1,251 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Hypothesis Testing  - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Hypothesis Testing </h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+  </section>
+
+
+  <!-- -------------------------------- -->
+  <!-- -------------------------------- -->
+  <section class="left">
+<h2>Hypothesis Testing</h2>
+
+<p> General process
+
+
+<ul class = "spaced">
+  <li> Identify the hypothesis you want to test.  <b>Null hypothesis</b> the two values are equal.  <b>Alternative hypothesis</b> the values are different $>$, $<$, or $\neq$.
+  <li> Identify the <b>level of significance</b> $\alpha$ you want to use.
+  <li> Convert the sample statistic into a $z$-value
+  <li> Compute the probability $p$-value of getting a sample as extreme or more extreme than our sample.
+  <li> If the probability is lower than the level of significance we say <b>reject</b> the null hypothesis and <b>accept</b> the alternative hypothesis ($p < \alpha$).  Otherwise, we say the evidence is not strong enough to reject the null hypothesis ($p > \alpha$).
+</ul>
+
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>One-sided and Two-sided Tests </h2>
+
+<p> One-sided test -- the alternative hypothesis is "less than" or "greater than".
+<ul> <li> For "less than", read the $p$-value directly from the $Z$ table
+  <li> For "greater than", find the probability and subtract : $1 - p$.
+</ul>
+
+<p> Two-sided test -- the alternative hypothesis is "not equal to"
+  <ul> <li> If $z < 0$, find the probability and multiply by 2 : $2p$.
+    <li> If $z > 0$, find the probability, subtract, and multiply by 2 : $2(1-p)$.
+  </ul>
+</p>
+
+
+
+  </section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+<p> The mean work week for engineers in a company is believed to be about 60 hours.  A newly hired engineer hopes that it's shorter.  The work week of 10 engineers from the company are
+  \[45 \quad 50 \quad 55 \quad 55 \quad 55 \quad 55 \quad 60 \quad 60 \quad 65\quad 70 \]
+Based on the data should the new engineer count on the mean work week to be shorter than 60 hours?
+
+<p> The length of engineer work weeks at this company is known to be normally distributed with a standard deviation of 6 hours.
+
+<p> Use a level of significance $\alpha = 0.1$
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+
+<p> Null hypothesis: $H_0: \mu = 60$ hours
+
+<p> Alternative hypothesis: $H_1: \mu < 60$ hours
+
+<p> Compute the $z$-value: $z = -1.58$
+
+<p> Compute the $p$-value: $P(z < -1.58) = 0.0571$
+
+<p> Compare $p$ and $\alpha$: $0.0571 < 0.1$
+
+<p> Because the $p$ value is less than the significance level $\alpha$, we reject the null hypothesis and accept the alternative hypothesis.
+
+<p> The data supports the claim that the average work week at this company is less than 60 hours.
+
+</section>
+
+
+
+
+
+    <!-- -------------------------------- -->
+    <section class="left">
+    <h2>Example</h2>
+
+<p> It is believed that a stock price for a particular company will grow at a rate of $\$5$ per week with a standard deviation of $\$2$.  An investor does not believe this claim.
+
+<p> The changes in stock price is recorded for ten weeks and are as follows
+  \[2 \quad 3 \quad 3 \quad 4 \quad 5 \quad 5 \quad 6 \quad 7\quad 8 \quad 10 \]
+
+<p> It is believed that the growth rate of the stock is normally distributed.
+
+<p> Perform a hypothesis test using a $5\%$ level of significance.
+
+</section>
+
+  <!-- -------------------------------- -->
+  <section class="left">
+  <h2>Example</h2>
+
+    <p> Null hypothesis: $H_0: \mu = 5$ dollars
+
+  <p> Alternative hypothesis: $H_1: \mu \neq 5$ dollars
+
+<p> Compute the sample mean $\overline{x} = 5.3$
+
+<p> Compute the $z$-value
+    \[ z = (5.3 - 5)/ \left(\frac{2}{\sqrt{10}}\right) = 0.47\]
+
+<p> From the $Z$ table, $P(z < 0.47) = 0.6808$
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+      <h2>Example</h2>
+
+    <p> From the $Z$ table, $P(z < 0.47) = 0.6808$
+
+    <p> Subtract from $1$ to find the probability of another sample having a mean larger than our sample mean $5.3$.  \[1 - 0.6808 = 0.3152\]
+
+    <p> Multiply by two to find the $p$-value: $p = 0.6304$
+
+  <p> Compare the $p$-value with the significance level $\alpha$
+    \[0.6304 > 0.05 \]
+
+  <p> Do not reject the null hypothesis.  The evidence supports the claim that the weekly growth rate of the stock is $\$5$.
+          </section>
+
+
+    <!-- -------------------------------- -->
+
+    <section class="left">
+    <h2>Check your understanding</h2>
+
+    <p>Make a conclusion for each of the hypothesis tests at the $5\%$ level of significance.</p>
+
+    <ul>
+    <li>We want to test whether the mean height of eighth graders is 66 inches. <br> The null and alternative hypothese are <br> $H_0: \mu = 66$ inches and $H_1: \mu \neq 66$ inches. <br>
+      You compute the $p$-value and find $p = 0.46$.
+
+    <ul class="fragment spaced">
+      <li class="green">Do not reject the null hypothesis.  The data supports the claim that the mean height of eighth graders is 66 inches.
+    </ul>
+
+    <li>We want to test if college students take less than five years to graduate from college, on the average. <br>  The null and alternative hypotheses are <br> $H_0: \mu = 5$ years and $H_1: \mu < 5$ years.  <br>
+      You compute the $p$-value and find $p = 0.02$.
+
+    <ul class="fragment spaced">
+      <li class="green">Reject the null hypothesis.  The data supports the claim that, on average, college students take less than five years to graduate from college.
+    </ul>
+
+      </ul>
+
+  </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li> Describe the general process for hypothesis testing
+<li> Perform hypothesis tests for the mean, with standard deviation known
+<li> Write hypothesis test conclusions specific to the scenario
+</ul>
+</p>
+
+
+<br>
+  <h2>Reading</h2>
+
+<p>  Textbook section 9.5: Additional Information and Full Hypotheses Test Examples </p>
+
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
