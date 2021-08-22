@@ -1,0 +1,3 @@
+convert -geometry 640x400 -density 200x200 Sample.pdf[1] ../simple-1.png  
+
+
