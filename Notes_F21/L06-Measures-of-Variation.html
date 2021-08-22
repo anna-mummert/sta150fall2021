@@ -1,0 +1,535 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+
+    table.right tr td { text-align: right; }
+
+  </style>
+
+  <title>Measures of Variation - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+	<h1>Measures of Variation </h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Measures of variation</h2>
+
+
+<p>Last time, we looked at how to measure the <em>center</em>
+of a data set.</p>
+
+<p>Next, we want to look at how widely a data set is spread out.<p>
+
+<p>Compare these data sets:</p>
+<ul>
+<li> 5, 10, 15, 20, 25
+<li> 5, 6, 15, 24, 25
+</ul>
+
+<p>Both have the same mean (and median): 15. </p>
+
+<p>But the second is &ldquo;more spread out&rdquo;.</p>
+
+<p>We want to <em>quantify</em> this difference.</p>
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Range</h2>
+
+<p>The first way we measure variation is with the <em>range</em>.<p>
+
+<p>The range of a data set is the difference between the maximum and
+minimum values:<p>
+
+<ul>
+<li>range = max - min
+</ul>
+
+<p>For the data set 5, 10, 15, 20, 25, the range is 25 - 5 = 20.</p>
+
+<p>For the data set 10, 40, 60, 90, the range is 80.
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Standard deviation</h2>
+<p>The range does not help us see a difference in these data
+sets:</p>
+<ul>
+<li> 5, 10, 15, 20, 25
+<li> 5, 6, 15, 24, 25
+</ul>
+
+<p>Both have a range of 20.</p>
+
+<p>We want a measure of variation that uses all the points, not just the
+largest and smallest.</p>
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Standard deviation</h2>
+
+<p>The most common measure is called the <em>standard deviation</em>.<p>
+
+<p>We will learn the process to compute it, but it is more often computed
+by software.</p>
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Computing standard deviation</h2>
+
+<p>First, make a table with one row per data value. Put in the data values
+and the mean of the data.</p>
+
+<table class="right">
+<tr><td>$x$</td><td>$\bar x$</td></tr>
+<tr><td>$5$</td><td>$15$</td></tr>
+<tr><td>$10$</td><td>$15$</td></tr>
+<tr><td>$15$</td><td>$15$</td></tr>
+<tr><td>$20$</td><td>$15$</td></tr>
+<tr><td>$25$</td><td>$15$</td></tr>
+</table>
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Computing standard deviation</h2>
+
+<p>First, make a table with one row per data value. Put in the data values
+and the mean of the data.</p>
+
+<p>Second, add a column for $x - \bar x$. This is the first column minus the second.</p>
+
+<table class="right">
+<tr><td>$x$</td><td>$\bar x$</td><td>$(x - \bar x)$</tr>
+<tr><td>$5$</td><td>$15$</td><td>$-10$</tr>
+<tr><td>$10$</td><td>$15$</td><td>$-5$</tr>
+<tr><td>$15$</td><td>$15$</td><td>$0$</td></tr>
+<tr><td>$20$</td><td>$15$</td><td>$5$</td></tr>
+<tr><td>$25$</td><td>$15$</td><td>$10$</td></tr>
+</table>
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Computing standard deviation</h2>
+
+<p>First, make a table with one row per data value. Put in the data values
+and the mean of the data.</p>
+
+<p>Second, add a column for $x - \bar x$. This is the first column minus the second.</p>
+
+<p>Third, square each value from the third column.</p>
+
+<table class="right">
+<tr><td>$x$</td><td>$\bar x$</td><td>$(x - \bar x)$</td><td>$(x-\bar x)^2$</tr>
+<tr><td>$5$</td><td>$15$</td><td>$-10$</td><td>$100$</tr>
+<tr><td>$10$</td><td>$15$</td><td>$-5$</td><td>$25$</tr>
+<tr><td>$15$</td><td>$15$</td><td>$0$</td><td>$0$</td></tr>
+<tr><td>$20$</td><td>$15$</td><td>$5$</td><td>$25$</tr>
+<tr><td>$25$</td><td>$15$</td><td>$10$</td><td>$100$</tr>
+</table>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+<p>First, make a table with one row per data value. Put in the data values
+and the mean of the data.</p>
+
+<p>Second, add a column for $x - \bar x$. This is the first column minus the second.</p>
+
+<p>Third, square each value from the third column.</p>
+
+<table class="right">
+<tr><td>$x$</td><td>$\bar x$</td><td>$(x - \bar x)$</td><td>$(x-\bar x)^2$</tr>
+<tr><td>$5$</td><td>$15$</td><td>$-10$</td><td>$100$</tr>
+<tr><td>$10$</td><td>$15$</td><td>$-5$</td><td>$25$</tr>
+<tr><td>$15$</td><td>$15$</td><td>$0$</td><td>$0$</td></tr>
+<tr><td>$20$</td><td>$15$</td><td>$5$</td><td>$25$</tr>
+<tr><td>$25$</td><td>$15$</td><td>$10$</td><td>$100$</tr>
+</table>
+
+<p>Fourth, add up the final column: $100 + 25 + 0 + 25 + 100 = 250$.</p>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Computing the standard deviation</h2>
+
+
+<p>Divide the sum you obtained by $N -1$. In our case, $N = 5$, so we compute
+\[
+\frac{	250}{4} = 62.5
+\]
+Take the square root to get
+\[
+\sqrt{62.5} = 7.91
+\]
+This is the <em>sample standard deviation</em>.
+
+      </section>
+
+
+
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Statistics notation </h2>
+
+<p>We can summarize the sample standard deviation in statistics notation.</p>
+
+<p>First, we found each value of $(x - \bar x)^2$ and added them up. This is
+\[
+\sum (x - \bar x)^2
+\]
+
+<p>Then we divided by $N-1$. This is
+\[
+\frac{\sum (x - \bar x)^2}{N-1}
+\]
+
+<p>Finally, the sample standard deviation is
+\[
+s = \sqrt{\frac{\sum(x - \bar x)^2}{N-1}}
+\]
+We use an &ldquo;s&rdquo; to stand for the sample standard deviation.
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+  <h2>Quick estimate for standard deviation</h2>
+
+  Rule of thumb estimate:
+  \[ s \approx \dfrac{max - min}{4} \]
+
+
+  <p>If your computed $s$ is more than your range, you should double check $s$. </p>
+
+
+  </section>
+
+  <!-- -------------------------------- -->
+  <section class="left">
+<h2>What does standard deviation measure?</h2>
+
+<p>Data points make the standard deviation larger
+when they make $(x - \bar x)^2$ larger. </p>
+
+<p> The farther a data point is from the mean, the bigger that square is.
+</p>
+
+<p>The square root helps undo the squaring.</p>
+
+<p>So in the end, we have something that measures a combination of
+how far each data point is from the mean.</p>
+
+</section>
+
+  <!-- -------------------------------- -->
+
+  <section class="left">
+  <h2>Check your understanding</h2>
+
+  <p>A data set for a continuous variable has mean 16.7, range 9, and sample standard deviation 3.6.</p>
+
+
+
+  <ul>
+  <li>Does it make sense to compute the data value that is 1 "range" below the mean?  If so find the value.
+
+  <ul class="fragment spaced">
+    <li class="green">The range is the entire distance from the smallest value to the largest.  The mean should be somewhere between these two values.  It does not make sense to compute a value 1 "range" below the mean.  This point does not exist (it wpuld be smaller than the minimum data value).  </li>
+  </ul>
+</li>
+  <li>Does it make sense to compute the data value that is 1 "standard deviation" below the mean?  If so find the value.
+
+  <ul class="fragment spaced">
+    <li class="green"> Using the rough estimate $s \approx (max - min) / 4$, likely the value that is 1 "standard deviation" below the mean is above the min (in the data set).
+    </li>
+<li> The value 1 "standard deviation" below the mean is $16.7 - 9 = 10.7$</li>
+<li> Later on we'll do this type of calculation a lot.  It will work well for data that is normally distributed.
+  </ul>
+</li>
+
+
+
+    </ul>
+
+  </section>
+
+
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Population standard devitation</h2>
+<p>There is a second kind of standard deviation called
+the <em>population standard deviation</em>.</p>
+
+<p>To find this, we use the same procedure, but we divide by $N$
+instead of $N-1$.
+</p>
+
+<p>We use $\sigma$ to stand for the population standard deviation.
+This is a Greek lower case sigma.</p>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Computing a population standard deviation</h2>
+
+<p>Find the population standard deviation of 74, 80, 90, 92.</p>
+
+<p class="fragment">The mean is $(70 + 80 + 90 + 92)/4 = 84$</p>
+
+<p class="fragment">Make a table:</p>
+<table class="right fragment">
+<tr><td>$x$</td><td>$\bar x$</td><td>$(x - \bar x)$</td><td>$(x - \bar x)^2$</td></tr>
+<tr><td>$70$</td><td>$84$</td><td>$-14$</td><td>$196$</td>
+<tr><td>$80$</td><td>$84$</td><td>$-4$</td><td>$16$</td>
+<tr><td>$90$</td><td>$84$</td><td>$6$</td><td>$36$</td>
+<tr><td>$92$</td><td>$84$</td><td>$8$</td><td>$64$</td>
+</table>
+
+<p class="fragment">Find $\sum (x - \bar x)^2 = (196 + 16 + 36 + 64) = 312$</p>
+
+<p class="fragment">Divide by $N$: $312/4 = 78$</p>
+<p class="fragment">Take a square root:
+\[
+\sigma = \sqrt{78} = 8.83
+\]
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+
+
+      <section class="left">
+	<h2>Which to use?</h2>
+
+<p>If we have data for an entire population, we use the
+population standard deviation.</p>
+
+<p>If we have a sample, the sample standard deviation
+gives a better estimate of the standard deviation of
+the entire population (which we don't know).</p>
+
+<p>Why?  If we have a random sample, we are less likely to
+find data at the extremes of the population, because there
+are fewer population members at the extremes.</p>
+
+<p>So the standard deviation of our sample tends to understate
+the standard deviation of the population. Dividing by $N-1$ helps
+counteract this.</p>
+
+<p>The exact reason for using $N-1$ is covered in more advanced
+courses.</p>
+
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+
+
+      <section class="left">
+	<h2>Coefficient of variation</h2>
+<p>The <em>coefficient of variation</em> is the standard deviation
+divided by the mean.</p>
+
+<p>For example, if the standard deviation is $3$ and the mean is $12$,
+the coefficient of variation is $3/12 = 0.25$.</p>
+
+
+<p>You cannot compare two standard deviations directly, because
+they may have different scales.</p>
+
+<p>You can compare coefficients of variation to compare
+data sets with different scales.</p>
+
+
+</section>
+
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Chebyshev’s Theorem</h2>
+
+<p>We can use standard deviations like a ruler. The mean is in the middle,
+and we count by standard deviations on each side.</p>
+
+
+<p><em>Chebyshev’s Theorem</em> is a result about that tells us
+how much data must be in certain regions on that ruler.</p>
+
+<p>All that we need to know is the population mean, $\mu$,
+and the population standard deviation, $\sigma$.</p>
+
+<p>We can also use the sample mean, $\bar x$, and the sample
+standard deviation, $s$.</p>
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Chebyshev's theorem</h2>
+
+<ul>
+<li>
+At least $75\%$ of the data falls within two standard
+deviations of the mean:
+<ul>
+<li>Between $\mu - 2\sigma$ and $\mu + 2\sigma$
+<li>Between $\bar x - 2s$ and $\bar x + 2s$
+</ul>
+
+<li class="fragment">
+At least $88.9\%$ of the data falls within three standard
+deviations of the mean:
+<ul>
+<li>Between $\mu - 3\sigma$ and $\mu + 3\sigma$
+<li>Between $\bar x - 3s$ and $\bar x + 3s$
+</ul>
+
+<li class="fragment">
+At least $93.8\%$ of the data falls within four standard
+deviations of the mean:
+<ul>
+<li>Between $\mu - 4\sigma$ and $\mu + 4\sigma$
+<li>Between $\bar x - 4s$ and $\bar x + 4s$
+</ul>
+
+
+</ul>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Example</h2>
+
+<p>Suppose we have a data set with a mean of $40$ and a standard deviation
+ of $6$.</p>
+
+<ul class="spaced">
+<li class="fragment"> At least $75\%$ of the population will be between $28$ and $52$
+<li class="fragment"> At least $88.9\%$ of the population will be between $22$ and $58$
+<li class="fragment"> At least $93.8\%$ of the population will be between $16$ and $64$
+</ul>
+
+<p class="fragment">It is possible for even <em>more</em> of the population to be in these regions. Chebyshev's theorem only gives a lower bound.</p>
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+<p>
+<ul>
+<li>Compute the range of a data set
+<li>Compute the sample standard deviation and
+population standard deviation of a data set
+<li>Understand the general difference between sample
+standard deviations and population standard deviations
+<li>Use Chebyshev’s Theorem to find intervals that
+contain at least $75\%$, $88.9\%$, or $93.8\%$ of the
+data.
+</ul>
+</p>
+
+<br>
+<h2>Reading</h2>
+
+<p>Textbook section 2.7: Measures of the Spread of the Data </p>
+
+      </section>
+
+
+
+
+    </div>
+  </div>
+  <script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
