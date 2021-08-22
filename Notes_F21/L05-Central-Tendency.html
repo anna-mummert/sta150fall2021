@@ -1,0 +1,370 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    li.green { color: #008800   !important; }
+  </style>
+
+  <title>Measures of Central Tendency - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+	<h1>Measures of Central Tendency</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+<h2>Central Tendency</h2>
+
+<p>We use the term <em>central tendency</em> to describe
+the "average" or "typical" value of a data set.
+</p>
+
+<p>There are several ways to talk about the average,
+which apply in different situations.
+</p>
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+
+<h2>Mode</h2>
+
+<p>For categorical data, there are not may ways to measure the &ldquo;center&rdquo;.
+</p>
+
+<p>The most common data value is called the <em>mode</em>. In some cases,
+this is an informative measure.</p>
+
+<ul class="spaced">
+<li>The most common college for STA 150 students is the College of Business.
+
+<li>The most common family name in South Korea is <em>Kim</em>,
+   with about 21.5 percent of their population. The next most common, <em>Lee</em>,
+	isused by about 14.7 percent of the population.
+
+</ul>
+
+<p>For scale data, we don't normally talk about the mode. We use other
+measures.</p>
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+<h2>Median</h2>
+
+<p>The <em>median</em> represents the middle of the data when it is
+sorted in order.
+</p>
+
+<p>When there are an odd number of data points, the median is the
+middle value.</p>
+
+<ul class="spaced">
+<li>The median of 12, 14, 17, 19, 21 is 17
+<li>The median of 9, 9, 10, 12, 12, 13, 15, 17, 19 is 12
+</ul>
+
+<p class="fragment">When there are an even number of data points, the median is halfway
+between the middle two points.</p>
+
+<ul class="fragment spaced">
+<li>The median of 20, 30, 40, 50 is 35, halfway between 30 and 40.
+<li>The median of 3, 4, 4, 6, 8, 10 is 5, halfway between 4 and 6.
+</ul>
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+<h2>Mean</h2>
+
+<p>The <em>mean</em> of a data set is made by adding the values
+and dividing by the number of values.
+</p>
+
+<ul class="spaced">
+<li>For the data set 4, 8, 10, 14, the total is 36.
+<br/>The mean is 36 / 4 = 9.
+<li class="fragment">For the data set 20, 25, 30, 45, 50,
+the total is 170, and the mean is 170 / 5 = 34.
+</ul>
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+      <h2>Check your understanding</h2>
+
+      <p>Identify the mode, median, and mean of the following data.</p>
+
+\[12 \quad 13 \quad 16 \quad 19 \quad 19 \quad 21 \]
+
+      <ul>
+      <li>Mode
+
+      <ul class="fragment spaced">
+        <li class="green">19
+      </ul>
+
+      <li>Median
+
+      <ul class="fragment spaced">
+        <li class="green">17.5
+      </ul>
+
+      <li>Mean
+
+        <ul class="fragment spaced">
+      <li class="green">16.7 (round to one more decimal place than the data)
+        </ul>
+
+
+
+        </ul>
+
+      </section>
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+<h2>Notation for the mean</h2>
+
+<p>In statistics, we use special notation to describe some of our computations.<p>
+
+<p>We let $N$ stand for the size of a sample or data set.</p>
+
+<p>We use variables like $x$ and $y$ to stand for the data. These are
+sometimes called <em>random variables</em>.  </p>
+
+<p>In algebra, a variable stands for a single number. In statistics,
+a variable stands for the entire set of data. </p>
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+<h2>Notation for the mean</h2>
+
+<p>We use the $\sum$ symbol to mean &ldquo;Add these values&rdquo;.
+</p>
+
+<p>So, if $x$ stands for a data set, the notation
+\[
+\sum x
+\]
+means to add the values of the data set.
+</p>
+
+<p>In this notation, the mean value of a data set is
+\[
+\frac{\sum x}{N}
+\]</p>
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+<h2>Notation for the mean</h2>
+
+<p>Because the mean is used so often, it has special notation.<p>
+
+<p>If $x$ stands for a data set, we let $\bar x$ represent the mean of the data set.</p>
+
+<p>So we have the formula
+\[
+\bar x =
+\frac{\sum x}{N}
+\]
+</p>
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+<h2>Sensitivity to outliers</h2>
+
+<p><em>Outliers</em> are data points that are very different from the others
+&ndash; much larger or much smaller.</p>
+
+<p>For example, consider a group of people whose heights, in inches, are
+62, 62, 64, 66, and 78. <p>
+
+<p>The person who is 78 inches tall is an outlier in this group.</p>
+
+<p>The median height is 64. Half the group is shorter than the median, and half is taller than the median.<p>
+
+<p>The mean height is 68. All but one person in the group is shorter than the mean height.</p>
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+<h2>Outliers example</h2>
+
+<p>To show the effect of outliers, we will look at data from
+the Congressional Budget Office (<em>
+<a href="https://www.cbo.gov/publication/55413">The Distribution of
+Household Income, 2016</a></em> released in July 2019).
+</p>
+
+<p>The CBO divided the population into 5 groups, each of which have the
+same number of households. The population was divided by household income after
+taxes and transfers were taken into account.
+<p>
+
+<p>So these numbers represent income <em>after taxes</em>, but <em>including</em>
+benefits such as SNAP, Medicaid, etc.</p>
+</section>
+
+
+<section class="left">
+
+<h2>2016 U.S. Household Income Data</h2>
+
+<p>Each group includes the same number of households.</p>
+
+<p>Average income of each group of households:</p>
+<ul>
+<li>First 20%: $35,000
+<li>Second 20%: $48,000
+<li>Third 20%: $66,000
+<li>Fourth 20%: $92,000
+<li>Fifth 20%: $215,000
+</ul>
+
+      </section>
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+<h2>2016 U.S. Household Income Bar Chart</h2>
+
+<img src="Figures/USIncome_2016.png">
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+<h2>Comparing the median and mean</h2>
+
+<p>The <em>median</em> U.S. household income in 2016 from this data was $66,000.
+<p>
+
+<p>The <em>mean</em> U.S. household income in 2016 from this data was
+$91,200.</p>
+
+<p>The median represents a line halfway from the least household
+income to the highest.
+</p>
+
+<p>The mean is the number that you would multiply by the number of
+households to find the total household income in the U.S.
+</p>
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+<h2>Summary</h2>
+
+<p>Overall, the median is not very sensitive to outliers.<p>
+
+<p>For example, if we throw out the same number of data points
+at the top and bottom of the data, the median is unchanged.</p>
+
+<p>The mean is relatively sensitive to outliers. A large change in just
+a few data points can cause notable changes in the mean.</p>
+
+      </section>
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+<h2>Normally distributed data</h2>
+
+<p>Later in the course, we will see that many data sets have
+what is called a <em>normal distribution</em>:</p>
+
+<ul>
+<li>Heights of people in a large population
+<li>Weights of birds in a large flock of birds
+<li>Scores of a large population on a standardized exam
+</ul>
+
+<p>For normally distributed data, the median and the mean will
+be the same, or almost the same.</p>
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+<h2>Goals of this lesson</h2>
+<p>
+<ul>
+<li>Understand the use of the mode for categorical data
+<li>Understand the meaning of the median and how to compute it
+<li>Understand the meaning of the mean and how to compute it
+<li>Recognize the statistical notation for the mean: \[\bar x = \frac{\left (\sum x \right)}{N}\]
+<li>Understand the effect of outliers on the median and mean
+</ul>
+</p>
+<br>
+
+<h2>Reading</h2>
+
+
+<p>Textbook section 2.5:  Measures of the Center of the Data</p>
+
+</section>
+
+    </div>
+  </div>
+  <script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
