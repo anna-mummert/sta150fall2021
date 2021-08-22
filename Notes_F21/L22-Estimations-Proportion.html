@@ -1,0 +1,233 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Estimating Proportions - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Estimating Proportions</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+  </section>
+
+
+  <!-- -------------------------------- -->
+  <!-- -------------------------------- -->
+  <section class="left">
+<h2>Estimating Proportions </h2>
+
+
+  <p> We want to use the sample data to estimate the population proportion.</p>
+
+<br>
+<p> The sample proportion is a <b>point estimate</b> for the population proportion.
+$\hat p = \dfrac{r}{n} $
+</p>
+
+<br>
+<p> We'll extend our point estimate to an interval of values called a <b>confidence interval</b>.
+
+<ul class = "spaced">
+<li> The confidence interval will be centered at the sample proportion.
+
+<li> The confidence interval may or may not actually contain the population proportion.
+
+<li> If we could repeatedly take samples, compute the confidence intervals, then most of the confidence intervals should contain the population proportion.
+</ul>
+
+  </section>
+
+  <!-- -------------------------------- -->
+<section class="left">
+<h2>Proportions follows a Normal Distribution</h2>
+
+<p> When $n$ is large enough and $p$ is not close to $0$ or $1$, the population proportion is normally distributed
+  <ul> <li> mean $p$
+    <li> standard deviation $\frac{\sqrt{p(1-p)}}{\sqrt{n}}$
+</ul>
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Confidence Intervals</h2>
+
+
+<p> Because the standard deviation is known we can use normal distributions to find the confidence intervals.
+
+<p> Use $Z$ tables to find the <b>critical values</b>, $z_c$
+
+<p> The <b>margin of error</b> is
+  \[E = z_c \left(\frac{\sqrt{p(1-p)}}{\sqrt{n}} \right)\]
+
+<p> The confidence interval is $(\hat p - E, \hat p +E)$
+
+</section>
+
+  <!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+<p> A market research firm randomly selected 500 residents in a city to determine whether they have cell phones.
+
+<p> Of the 500 people surveyed, 421 responded yes they own a cell phone.
+
+<p> Using an $85\%$ confidence level, compute a confidence interval estimate for the true proportion of residents in the city who have a cell phone.
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+<p> Of the 500 people surveyed, 421 responded yes they own a cell phone.
+
+<p> The point estimate for the proportion is $\hat{p} = \dfrac{421}{500} = 0.842$
+
+<p> The critical value is $z_c = 1.44$
+  \[\frac{1 - 0.85}{2} = 0.075, \quad \text{then look up } z \text{ value} \]
+
+<p> The margin of error is
+  \[ E = 1.44 \left(\frac{\sqrt{0.842(1-0.842)}}{\sqrt{500}} \right) = 0.0236\]
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+<p> The $85\%$ confidence interval is $(0.842 - 0.0236, 0.842 + 0.0236)$, that is
+  \[ (0.8184, 0.8656) \]
+
+<p> With $85\%$ confidence, between $81.84\%$ and $86.56\%$ of residents in the city own a cell phone.
+
+<p> $85\%$ of all confidence intervals constructed in this way would contain the true population proportion.
+
+<p> $1 - 85\% = 15\%$ of confidence intervals will not contain the true population proportion.
+</section>
+
+
+<!-- -------------------------------- -->
+
+<section class="left">
+<h2>Check your understanding</h2>
+
+<p>Suppose 250 randomly selected people are surveyed to determine if they own a tablet.  Of the 250 surveyed, 98 reported owning a tablet.  Using a 95% confidence level, compute a confidence interval estimate for the true proportion of peole who own tablets.</p>
+
+<ul>
+<li>Compute the sample proportion of those who own tablets.
+
+<ul class="fragment">
+  <li class="green"> $\hat{p} = 98/250 = 0.392 = 39.2\%$
+</ul>
+
+<li>Find the critical value $z_c$ for the $95\%$ confidence interval.
+
+<ul class="fragment">
+  <li class="green"> $z_c = 1.96$
+</ul>
+
+<li>What is the margin of error $E$ for our $95\%$ confidence interval?
+
+  <ul class="fragment">
+<li class="green">
+  \[ E = 1.96 \left(\frac{\sqrt{0.392(1-0.392)}}{\sqrt{250}} \right) = 0.0605\]
+  </ul>
+
+
+<li>What is our $95\%$ confidence interval for the population proprotion who own tablets?
+  <ul class="fragment">
+<li class="green"> $(0.392 - 0.0605, 0.392 + 0.0605) = (0.3315, 0.4525)$
+  </ul>
+
+
+  </ul>
+
+</section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li> Define and compute the point estimate for the population proportion
+<li> Compute the margin of error and confidence intervals
+<li> Explain the meaning of the confidence interval
+</ul>
+</p>
+
+<br>
+
+  <h2>Reading</h2>
+
+<p>  Textbook section 8.3: A Population Proportion </p>
+
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
