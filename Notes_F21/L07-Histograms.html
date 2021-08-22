@@ -1,0 +1,216 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+
+    table.right tr td { text-align: right; }
+
+  </style>
+
+  <title>Histograms - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Histograms</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Histograms</h2>
+
+<p>Histograms display quantitative data.</p>
+
+<p>Data values are separated into continuous class (bins, bars), typically of the same width.<p>
+
+<p> The length of each bar is the frequency or relative frequency of the class. </p>
+
+<p> The shape of the histogram can help you understand the data - center and spread.  <p>
+
+
+      </section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Unimodal - one peak</h2>
+<p>$N = 500$, $\overline{x} = 2.07$, $s = 1.01$, median$= 2.00$, mode is near tallest bar (center)</p>
+
+<img src="Figures/SymmetricUnimodal1.png" width="80%"></img>
+
+
+
+</section>
+
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Bin width influences graph</h2>
+<p>$N = 500$, $\overline{x} = 2.07$, $s = 1.01$, median$= 2.00$, mode is near tallest bar (center)</p>
+
+<img src="Figures/SymmetricUnimodal2.png" width="80%"></img>
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Bimodal - two peaks</h2>
+<p>$N = 500$, $\overline{x} = -0.99$, $s = 3.40$, median$= -0.28$</p>
+
+<p> Two modes - near each of the two tallest bars</p>
+
+<img src="Figures/Bimodal.png" width="80%"></img>
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Left Skewed</h2>
+<p>$N = 500$, $\overline{x} = 1.83$, $s = 0.64$, median$= 1.96$, mode is near tallest bar</p>
+
+<img src="Figures/LeftSkewed.png" width="80%"></img>
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Right Skewed</h2>
+<p>$N = 500$, $\overline{x} = 1.20$, $s = 0.65$, median$= 1.06$, mode is near tallest bar</p>
+
+
+<img src="Figures/RightSkewed.png" width="80%"></img>
+
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Uniform</h2>
+<p>$N = 500$, $\overline{x} = 0.51$, $s = 0.29$, median$= 0.48$, no mode</p>
+
+<img src="Figures/SymmetricUniform1.png" width="80%"></img>
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Bin width influences graph</h2>
+<p>$N = 500$, $\overline{x} = 0.51$, $s = 0.29$, median$= 0.48$, no mode</p>
+
+<img src="Figures/SymmetricUniform2.png" width="80%"></img>
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Symmetric</h2>
+<img src="Figures/SymmetricUnimodal1.png" width="45%"></img>
+<img src="Figures/SymmetricUniform1.png" width="45%"></img>
+</section>
+
+<!-- -------------------------------- -->
+
+<section class="left">
+<h2>Check your understanding</h2>
+
+
+<ul>
+<li>When data are skewed left, what is the typical relationship between the mean and the median?
+
+<ul class="fragment spaced">
+  <li class="green">Typically the median would be less than the mean.
+</ul>
+
+<li>What type (shape) distribution would have the mean and median the same (or very similar)?
+
+<ul class="fragment spaced">
+  <li class="green">A symmetric data set would have mean and median the same.
+</ul>
+
+<li>If we added 5 to every value in a data set, how would the mean of the old and new data be related?
+
+  <ul class="fragment spaced">
+<li class="green">The mean of the new would be the mean of the old plus 5.
+  </ul>
+
+
+<li>If we added 5 to every value in a data set, how would the median of the old and new data be related?
+
+  <ul class="fragment spaced">
+<li class="green">The median of the new would be the median of the old plus 5. 
+  </ul>
+
+
+  </ul>
+
+</section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+<p>
+<ul>
+<li>Understand histograms are used for quantitative data
+<li>Identify the distribution shapes unimodal, bimodal, symmetric, left-skewed, right-skewed, unform (rectangular)
+<li>Use a histogram to estimate mean, median, and mode
+</ul>
+</p>
+
+<br>
+<h2>Reading</h2>
+
+<p>Textbook section 2.2: Histograms, Frequency Polygons, and Time Series Graphs. </p>
+
+<p>Textbook section 2.6: Skewness and the Mean, Median, and Mode. </p>
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
