@@ -1,0 +1,287 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Sample Size and T Intervals - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Sample Size and T Intervals</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+  </section>
+
+
+  <!-- -------------------------------- -->
+  <!-- -------------------------------- -->
+  <section class="left">
+<h2>Sample Size</h2>
+
+<p> Find the sample size needed to achieve a certain confidence interval
+
+<p> The general formal for the sample size is
+  \[n = \left(\frac{z_c \sigma}{E}\right)^2 \]
+
+<p> Round up to the next whole number
+
+
+  </section>
+
+
+  <!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+<p> A population has standard deviation 5.
+
+<p>  How large a sample size do we need to find a margin of error $E$ of 0.75?
+
+<p> Use a $85\%$ confidence interval.    </p>
+
+<br>
+<p> Find the critical value $z_c$: $z_c = 1.44$
+
+<p> Use the formula
+  \[n = \left(\frac{1.44 * 5}{0.75}\right)^2 = 92.16\]
+
+<p> We need to have a sample of size $n = 93$
+
+</section>
+
+<!-- -------------------------------- -->
+
+<section class="left">
+<h2>Check your understanding</h2>
+
+<ul>
+<li>True or false: With all other things equal, if your confidence level is larger, then the sample size will be larger, too.
+
+  <ul class="fragment spaced">
+<li class="green">True
+  </ul>
+
+  <li>True or false: With all other things equal, if your standard deviation is larger, then the sample size will be larger, too.
+
+  <ul class="fragment spaced">
+    <li class="green">True
+  </ul>
+
+
+  <li>True or false: With all other things equal, if your margin of error is larger, then the sample size will be larger, too.
+
+  <ul class="fragment spaced">
+    <li class="green">False
+  </ul>
+
+
+  </ul>
+
+</section>
+
+
+  <!-- -------------------------------- -->
+<section class="left">
+<h2>unknown Standard Deviation or small sample sizes</h2>
+
+<p> Using the normal distribution works well for (1) known population standard deviation or (2) sample size $n \geq 30$
+
+<p> These conditions are violated frequently in real world applications
+
+<p> To compute confidence intervals in this case (unknown standard deviation or small sample size)
+<ul class = "spaced">
+<li> Use the sample standard deviation $s$ as a <b>point estimate</b> for the population standard deviation
+
+<li> Use the Student's t-distribution, instead of the normal distribution
+</ul>
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Student's t-distribution </h2>
+
+<p> The distribution shape depends on the sample size $n$.
+  <ul> <li>The <b>degrees of freedom</b> is $df = n-1$
+</ul>
+
+<p> All Student's t-distributions are unimodal (mound shaped) and symmetric; they have fatter tails than a normal distribution
+
+<p> The critical values $t_c$ are found from a T table
+
+<ul> <li> Find the row for your degrees of freedom $df$
+
+<li> Find the column for your confidence level $c$
+
+</ul>
+
+  </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<img src = "Figures/t-table.png"></img>
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Confidence intervals </h2>
+
+<p> Compute the sample mean $\overline{x}$ and sample standard deviation $s$
+
+<p> Compute the degrees of freedom $df = n-1$
+
+<p> Find the critical value $t_c$ for your confidence level $c$
+
+<p> Compute the margin of error
+  \[ E = t_c \left(\frac{s}{\sqrt{n}} \right)\]
+
+<p> The confidence interval is
+  \[(\overline{x} - E, \overline{x} + E) \]
+
+  </section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example </h2>
+
+<p> You collect a sample of size 12 with a sample standard deviation of 55 and a sample average of 489.
+
+<p> Find the $85\%$ confidence interval for the mean</p>
+<br>
+
+<p> The degrees of freedom is $df = 11$
+
+<p> The critical value is $t_c = 1.548$
+
+<p> The margin of error is
+\[ E = 1.548 \left(\frac{55}{\sqrt{12}} \right) = 24.58\]
+
+<p> The $85\%$ confidence interval is $(489 - 24.58, 489 + 24.58)$, that is
+  \[(464.42, 513.58) \]
+  </section>
+
+  <!-- -------------------------------- -->
+
+  <section class="left">
+  <h2>Check your understanding</h2>
+
+
+  <li>True or false: The shape of a normal distribution depends on the sample size.
+
+    <ul class="fragment spaced">
+  <li class="green">False
+    </ul>
+
+    <li>True or false: The degrees of freedom depend on the sample size.
+
+    <ul class="fragment spaced">
+      <li class="green">True.  $df = n-1$
+    </ul>
+
+
+    <li>True or false: The critical value $t_c$ increases as the degrees of freedom increase.
+
+    <ul class="fragment spaced">
+      <li class="green">False
+    </ul>
+
+    <li>True or false: The critical value $t_c$ increases as the level of confidence increases.
+
+    <ul class="fragment spaced">
+      <li class="green">True
+    </ul>
+    </ul>
+
+  </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li> Find the sample size needed for a certain confidence interval
+<li> Describe when to use the Student's t-distribution
+<li> Compute the degrees of freedom
+<li> Find critical values from a T table
+<li> Compute the margin of error and confidence intervals
+</ul>
+</p>
+
+<br>
+
+  <h2>Reading</h2>
+
+  <p>  Textbook section 8.1: A Single Population mean using the Normal Distribution</p>
+
+
+<p>  Textbook section 8.2: A Single Population Mean using the Student's t Distribution </p>
+
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
