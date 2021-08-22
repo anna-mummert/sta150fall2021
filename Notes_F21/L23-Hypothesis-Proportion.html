@@ -1,0 +1,205 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Hypothesis Testing Proportions - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Hypothesis Testing Proportions</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+  </section>
+
+
+  <!-- -------------------------------- -->
+  <!-- -------------------------------- -->
+  <section class="left">
+<h2>Hypothesis Testing</h2>
+
+<p> General process -- same as for mean with known standard deviation ($z$-test)
+
+
+<ul >
+  <li> Identify the hypothesis you want to test.  <b>Null hypothesis</b> the two values are equal.  <b>Alternative hypothesis</b> the values are different $>$, $<$, or $\neq$.
+  <li> Identify the <b>level of significance</b> $\alpha$ you want to use.
+  <li> Convert the sample statistic into a $z$-value: \[\displaystyle{z = (\hat{p} - p) / \left( \frac{\sqrt{p(1-p)}}{\sqrt{n}}\right)}\]
+  <li> Compute the probability $p$-value of getting a sample as extreme or more extreme than our sample.
+  <li> If the probability is lower than the level of significance we say <b>reject</b> the null hypothesis and <b>accept</b> the alternative hypothesis ($p < \alpha$).  Otherwise, we say the evidence is not strong enough to reject the null hypothesis ($p > \alpha$).
+</ul>
+
+
+</section>
+
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+<p> A market research firm believes that more than $88\%$ of residents in a city own a cell phone.
+
+<p> The firm randomly selected 500 residents in a city to determine whether they have cell phones.
+
+<p> Of the 500 people surveyed, 421 responded yes they own a cell phone.
+
+<p> Test the claim using a hypothesis test.  Use a $10\%$ level of significance .
+</section>
+
+
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+
+<p> Null hypothesis: $H_0: p = 88\%$
+
+<p> Alternative hypothesis: $H_1: p > 88\%$
+
+<p> Compute the sample proportion: $\hat{p} = 421 / 500 = 0.842$
+
+<p> Compute the $z$-value: $z = -2.61$
+  \[\displaystyle{z = (0.842 - 0.88) / \left( \frac{\sqrt{0.88(1-0.88)}}{\sqrt{500}}\right) = -2.61}\]
+
+</section>
+
+
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+<p> Compute the $p$-value: $P(z > -2.61) = 1 - 0.0045 = 0.9955$
+
+<p> Compare $p$ and $\alpha$: $0.9955 > 0.1$
+
+<p> Because the $p$ value is greater than the significance level $\alpha$, we do reject the null hypothesis.
+
+<p> The data does not support the claim that more than $88\%$ of residents own a cell phone.
+
+</section>
+
+
+<!-- -------------------------------- -->
+
+<section class="left">
+<h2>Check your understanding</h2>
+
+<p>You suspect that more than $33\%$ of people own a tablet.  Of 250 randomly selected people surveyed, 98 reported owning a tablet.  Use a $5\%$ level of significance and perform a hypothesis test on this claim</p>
+
+<ul>
+<li>State null and alternative hypotheses.
+
+<ul class="fragment">
+  <li class="green"> $H_0: p = 0.33$ and $H_1: p > 0.33$
+</ul>
+
+<li>Find the $z$ value.
+
+<ul class="fragment">
+  <li class="green"> \[\displaystyle{z = (0.392 - 0.33) / \left( \frac{\sqrt{0.33(1-0.33)}}{\sqrt{250}}\right)}=2.08\]
+</ul>
+
+<li>Compute the $p$-value.
+
+  <ul class="fragment">
+<li class="green">$P(z > 2.08) = 1 - 0.9812 = 0.0188$
+  </ul>
+
+
+<li>What is your conclusion?
+  <ul class="fragment">
+<li class="green"> Reject the null hypothesis.  The data supports the claim that more than $33\%$ of people own a tablet.
+  </ul>
+
+
+  </ul>
+
+</section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li> Describe the general process for hypothesis testing
+<li> Compute $z$-values for the population proportion
+<li> Perform hypothesis test for the population proportion
+<li> Write hypothesis test conclusions specific to the scenario
+</ul>
+</p>
+
+<br>
+
+  <h2>Reading</h2>
+
+<p>  Textbook section 9.5: Additional Information and Full Hypotheses Test Examples </p>
+
+<p>  Textbook section 9.6: Hypothesis Testing of a Single Mean and Single Proportion </p>
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
