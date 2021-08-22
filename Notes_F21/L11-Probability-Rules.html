@@ -1,0 +1,283 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Probability Rules - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Probability Rules</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Probability</h2>
+
+<p>A probability is a number between 0 and 1 that tells you how often an event will happen if you peform the experiment many times, the long-term relative frequency.</p>
+
+<p>
+<ul>
+<li> Probabiliy 0 means the event never happens
+<li> Probabilities closer to 0 mean the event happens less often
+  <li> Probabilities closer to 1 mean the event happens more often
+  <li> Probability 1 means the even always happens
+</ul>
+</p>
+
+<p>If you can write out all possible outcomes, then you can compute the theoretical (exact) probability of an event.  </p>
+
+<p> If you cannot list all possible outcomes, you need to compute the long-term relative frequency of the event.  </p>
+
+
+</section>
+
+  <!-- -------------------------------- -->
+<section class="left">
+<h2>Basic facts</h2>
+
+<ul class="spaced">
+  <li> The total probability of the entire spample space (all possible outcomes) is 1 </li>
+  <li> For any event, $0 \leq P(A) \leq 1$ </li>
+  <li> For any event A with probability $P(A)$, the complement of $A$, $A^c$, has probability $1 - P(A)$
+    \[P(A^c) = 1 - P(A) \]
+
+</ul>
+
+
+<p>
+
+
+</section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Independent events</h2>
+
+<p>Two events are independent if the probability of each one occurring does not depend on whether the other one ocurred.</p>
+
+
+<p>Multiplication rule for independent events:
+  \[P(A \text{ and } B) = P(A) \times P(B) \]
+<br>
+
+<p> Example -- roll a six-sided die and flip a fair coin.  What is the probability that we flip heads and roll a 4?
+  <ul>
+    <li> Flipping a coin and rolling a die are independent -- the probability of one does not depend on whether the other occurred.
+    <li> P(flip heads) = 1/2 and P(roll 4) = 1/6
+    <li> P(flip heads and roll 4) = (1/2) * (1/6) = 1/12
+</ul>
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Mutually exclusive events</h2>
+
+<p> Two events are mutually exclusive if they cannot both occur at the same time.   </p>
+
+<p> Two events are mutually exclusive if the probability they both occur at the same time (A and B) is 0
+\[P(A \text{ and } B) = 0 \]
+
+<p> Addition rule for mutually exclusive events:
+  \[P(A \text{ or } B) = P(A) + P(B) \]
+</p>
+
+<br>
+
+<p> Example -- Roll a six-sided die.  What is the probability that you roll a 2 or an odd number?
+  <ul>
+    <li> Rolling a 2 and rolliing an odd number are mutually exclusive -- they cannot occur at the same time.
+    <li> P(roll 2) = 1/6 and P(roll odd) = 1/2
+    <li> P(roll 2 or roll odd) = 1/6 + 1/2 = 4/6 = 2/3
+</ul>
+
+
+</section>
+
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>General Addition Rule</h2>
+
+<p>For any events $A$ and $B$
+\[P(A \text{ or } B) = P(A) + P(B) - P(A \text{ or } B) \]  </p>
+
+<p>Idea: "or" counts events in $A$, in $B$, or in both. </p>
+
+<p> If an event is in both, then it is "double counted" once in $P(A)$ and again in $P(B)$. </p>
+
+<p>Subtract off the overlap ($A$ and $B$) once to remove the double counting.  </p>
+
+<br>
+
+<p> Example -- Roll a six-sided die.  What is the probability that you roll a 2 or an even number?
+  <ul>
+    <li> Rolling a 2 and rolling an even number are not mutually exclusive -- they can occur at the same time.
+    <li> P(roll 2) = 1/6 and P(roll even) = 1/2 and P(roll 2 and roll even) = 1/6
+    <li> P(roll 2 or roll even) = 1/6 + 1/2 - 1/6 = 1/2
+</ul>
+
+
+
+
+
+</section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Complement events</h2>
+
+
+<ul class="spaced">
+<li>Every event is in $A$ or $A^c$.  Together they are the entire sample space. </li>
+<ul>
+<li> $P(A \text{ or } A^c) = 1$
+</ul>
+
+<li> $A$ and $A^c$ are mutually exclusive events -- they cannot occur at the same time</li>
+<ul>
+  <li> $P(A \text{ and } A^c) = 0$
+    <li> $P(A \text{ or } A^c) = P(A) + P(A^c) = 1$
+</ul>
+
+<li>$A$ and $A^c$ are not independent events -- the probability of one does depend on whether the other occurred</li>
+<ul>
+  <li> $P(A \text{ and } A^c) \neq P(A) \times  P(A^c)$
+</ul>
+
+
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+      <h2>Check your understanding</h2>
+
+      <p>$A$ and $B$ are mutually exclusive events with $P(A) = 0.2$ and $P(B) = 0.3$.</p>
+
+      <ul>
+      <li>Find $P(A \text{ and } B)$.
+
+      <ul class="fragment spaced">
+        <li class="green">$P(A \text{ and } B) = 0$
+      </ul>
+
+      <li>Find $P(A | B)$.
+
+        <ul class="fragment spaced">
+      <li class="green">$P(A | B) = \dfrac{P(A \text{ and } B)}{P(B)} = 0$
+        </ul>
+
+        <li>Find $P(A \text{ or } B) $.
+
+        <ul class="fragment spaced">
+          <li class="green">$P(A \text{ or } B) = P(A) + P(B) = 0.5$
+        </ul>
+
+        <li>Is it possible to have two mutually exclusive events with $P(A) = 0.7$ and $P(B) = 0.4$
+
+        <ul class="fragment spaced">
+          <li class="green">No.  Two mutually exclusive events with these probabilities would have $P(A \text{ or } B) = P(A) + P(B) = 1.1$.  No probability can be more than $1$.  
+        </ul>
+
+
+        </ul>
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li> List and use the basic facts and rules of probability
+<li> Define and give examples of independent and mutually exclusive events
+<li> Compute probabilities for independent and mutually exclusive events
+<li> Use the general addition rule
+</ul>
+</p>
+
+<br>
+
+  <h2>Reading</h2>
+
+<p>  Textbook section 3.2: Independent and Mutually Exclusive Events </p>
+
+<p> Textbook section 3.3: Two Basic Rules of Probability</p>
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
