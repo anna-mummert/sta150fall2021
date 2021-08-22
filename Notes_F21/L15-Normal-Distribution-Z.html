@@ -1,0 +1,296 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Standard Normal Distribution - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Standard Normal Distribution</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+  </section>
+
+
+  <!-- -------------------------------- -->
+  <!-- -------------------------------- -->
+  <section class="left">
+<h2>Normal Distribution  </h2>
+
+
+  <p> The most common type of continuous random variable is called a normal distribution.
+
+  <p> Normal distributions appear commonly in practice.
+
+  <p> Normal distributions are unimodal (mound shape) and symmetric.
+    <ul> <li>This shape tells us the mean, median, and mode are all the same.
+  </ul>
+
+  <p> All normal distributions look the same if we measure the $x$-axis using standard deviations.
+
+  <img src="Figures/Normal-Distributions-1.png" width="80%"></img>
+
+  </section>
+
+  <!-- -------------------------------- -->
+    <section class="left">      	<h2>Normal Distribution Probability</h2>
+  <p> We view the probability as the area of a certain region under the normal curve.
+
+  <img src="Figures/Normal-Distributions-2.png" width="80%"></img>
+
+  </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Z Value</h2>
+
+<p> We use the letter $z$ to stand for the number of standard deviations $x$ (the actual data value) is from the mean.
+
+<p> $z = 1$ means one standard deviation above the mean
+
+<p> $z = -3$ means three standard deviations below the mean</p>
+
+<br>
+
+<p> $x$ and $z$ are related by the formulas
+  \[ z = \frac{x - \mu}{\sigma}\]
+  \[ x = \mu + z \times \sigma \]
+</section>
+
+  <!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+<p> Assume a continuous random variable $x$ has a normal distribution with mean $50$ and standard deviation $6$.</p>
+
+<p> $x = 41$ has $z$ value
+\[ z = \frac{41 - 50}{6} = -1.5\]
+<p> $x = 74$ has $z$ value
+\[ z = \frac{74 - 50}{6} = 4\]</p>
+<p> $z = 2.25$ corresponds to
+  \[x = 50 + 2.25*6 = 63.5 \]
+
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Probabilities</h2>
+
+<p> When a random variable is normally distributed, compute probabilities by first converting to the standard normal distribution with mean 0 and standard deviation 1. </p>
+
+
+<p> This mean convert $x$ values to $z$ values and find probabilities from the $z$ values.  </p>
+
+<p> We can already compute probabilities for integer $z$ values
+  <ul class = "spaced">
+    <li> Within one standard deviation, $P(-1 \leq z \leq 1) = 68\%$</li>
+    <li> Between two standard deviations below and one standard deviation above $P(-2 \leq z \leq 1) = 81.5\%$ </li>
+    <li> More than three standard deviations above $P(z \geq 3) = 0.15\%$</li>
+  </ul>
+
+
+
+
+</section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Z Tables </h2>
+
+<p> To find probabilities for non-integer $z$ values use a $Z$ Table.
+
+<p> A $Z$ Table gives the cummulative probability from the left up to a specified $z$ value.
+
+<p> $z$ values are given with two decimal places.
+  <ul>
+    <li> ones place and tenths place form the rows
+      <li> hundredths place form the columns
+  </ul>
+
+<p> $z$ values start at $z = -3.00$ and go up to $z = 3.00$
+</section>
+
+<!-- -------------------------------- -->
+      <section class="left">
+
+
+
+<img src="Figures/z-table_Neg.png" width="80%"></img>
+
+</section>
+
+<!-- -------------------------------- -->
+      <section class="left">
+
+	<h2>Examples </h2>
+
+<p> Find $P(z < -2.23) = 0.0129$
+
+<p> Find $P(z > -2.23) = 1 - 0.0129 = 0.9871$</p>
+
+<br>
+<p> Assume a continuous random variable $x$ has a normal distribution with mean $50$ and standard deviation $6$.</p>
+
+<p> Find $P(x < 41)$.
+
+  <p>First $x = 41$ has $z$ value $z = -1.5$
+<p>Second, $P(z < -1.5) = 0.0668$
+
+<p>  $P(x < 41) = P(z < -1.5) = 0.0668$
+</section>
+
+<!-- -------------------------------- -->
+      <section class="left">
+
+<img src="Figures/z-table_Pos.png" width="80%"></img>
+
+</section>
+
+<!-- -------------------------------- -->
+      <section class="left">
+
+<h2>Examples </h2>
+
+<p> Find $P(z < 0.75) = 0.7734$
+
+<p> Find $P(0 < z < 0.75) = 0.7734 - 0.5 = 0.2734$</p>
+ \[ P(0 < z < 0.75) = P(z< 0.75) - P(z < 0) =  0.7734 - 0.5 = 0.2734\]
+<br>
+<p> Assume a continuous random variable $x$ has a normal distribution with mean $50$ and standard deviation $6$.</p>
+
+<p> Find $P(x > 74)$.
+
+<p>First $x = 74$ has $z$ value $z = 4$
+<p>Second, $P(z > 4) \approx 0$
+
+<p>  $P(x > 74) = P(z > 4) \approx 0$
+</section>
+
+
+<!-- -------------------------------- -->
+
+<section class="left">
+<h2>Check your understanding</h2>
+
+<p>Find each of the probabilities using a $Z$ table.</p>
+
+<ul>
+<li>$P(z < -1.23)$
+
+<ul class="fragment spaced">
+  <li class="green">$P(z < -1.23) = 0.1093$
+</ul>
+
+<li>$P(z > 2.20)$
+
+<ul class="fragment spaced">
+  <li class="green">$P(z > 2.20) = 1 - 0.9861 = 0.0139$
+</ul>
+
+<li>$P(-2.36< z < -0.24)$
+
+  <ul class="fragment spaced">
+<li class="green">$P(-2.36< z < -0.24) = 0.4052 - 0.0091 = 0.3961$
+  </ul>
+
+
+  <li>True or false: a $z$-score of $z = -2.36$, means the value is 2.36 standard deviations above the mean.
+
+    <ul class="fragment spaced">
+  <li class="green">False.  The value is $2.36$ standard deviations below the mean. 
+    </ul>
+
+
+  </ul>
+
+</section>
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li> Convert between  $z$-values and the $x$-values for normally distributed parameters
+<li> Use a $Z$ table to compute probabilities
+</ul>
+</p>
+
+
+<br>
+  <h2>Reading</h2>
+
+<p>  Textbook section 6.1: The Standard Normal Distribution </p>
+
+<p>  Textbook section 6.2: Using the Normal Distribution </p>
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
