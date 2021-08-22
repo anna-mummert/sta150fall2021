@@ -1,0 +1,272 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Conditional Probability - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Conditional Probability</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Conditional Probability</h2>
+
+<p>A conditional probability is the probability that one event will happen  given that we know another event happened.  </p>
+
+<br>
+<p> Example
+
+<p> Roll a six-sided die.  If you know you rolled an even number, the probability that we roll a 2 is 1/3.
+
+<p> Without the extra knowledge, the probability that we roll a 2 is 1/6.
+
+
+</section>
+
+  <!-- -------------------------------- -->
+<section class="left">
+<h2>Notation</h2>
+
+We write P(A|B) for the conditional probability of event A gvien that event B happened.
+
+\[P(A|B) = \frac{P(A \text{ and } B)}{P(B)} \]
+
+<br>
+<p>
+Example
+
+<p> Roll a six-sided die.  If you know you rolled an even number, the probability that we roll a 2 is 1/3.
+
+\[P(\text{ roll 2 } | \text{ roll even }) = \frac{P(\text{ roll 2 and roll even })}{P(\text{ roll even })} = \frac{1/6}{1/2} = 1/3\]
+
+</section>
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Independent Events </h2>
+
+<p>If A and B are independent (probability of one does not depend on whether the other occurred), then</p>
+\[P(A|B) = \frac{P(A \text{ and } B)}{P(B)} = \frac{P(A)\times P(B)}{P(B)} = P(A)\]
+
+<br>
+<p> Example -- roll a six-sided die and flip a fair coin.  What is the probability that we flip heads given that we rolled a 4?
+  <ul>
+    <li> Flipping a coin and rolling a die are independent -- the probability of one does not depend on whether the other occurred.
+    <li> P(flip heads) = 1/2 and P(roll 4) = 1/6
+    <li> P(flip heads and roll 4) = (1/2) * (1/6) = 1/12
+    <li> P(flip heads | roll 4) = (1/2) * (1/6) / 1/6 = 1/2
+</ul>
+
+
+
+</section>
+
+<!-- -------------------------------- -->
+      <section class="left">
+	<h2>Mutually exclusive events</h2>
+
+<p> If A and B are mutually exclusive (cannot occur at the same time), then </p>
+\[P(A|B) = \frac{P(A \text{ and } B)}{P(B)} = \frac{0}{P(B)} = 0\]
+
+<br>
+
+<p> Example -- Roll a six-sided die.  What is the probability that you roll a 2 given you roll an odd number?
+  <ul>
+    <li> Rolling a 2 and rolliing an odd number are mutually exclusive -- they cannot occur at the same time.
+    <li> P(roll 2) = 1/6 and P(roll odd) = 1/2
+    <li> P(roll 2 and roll odd) = 0
+    <li> P(roll 2 | roll odd) = 0 / 1/2 = 0
+</ul>
+
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Contingency Table</h2>
+
+<p> A contingency table is a way of displaying data that has been classified with two different categorical variables.  </p>
+
+<ul class="spaced">
+  <li> One variable corresponds to the rows; one to the columns </li>
+  <li> Cells are "and" probabilities for sample members who are in both categories.  </li>
+  <li> Total counts are given for the rows and columns.  </li>
+</ul>
+
+<p> Contingency tables are useful when computing condititional probabilities.  </p>
+
+
+
+</section>
+
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+<p>The following table shows data about smoking in a population of
+  500 people.</p>
+
+  <table class="right" border=1>
+    <tr>
+      <th></th> <th>Men</th><th>Women</th><th>Total</th>
+    </tr>
+    <tr>
+      <th>Smoker</th>
+      <td>39</td>
+      <td>37</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <th>Nonsmoker</th>
+      <td>191</td>
+      <td>233</td>
+      <td>424 </td>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <td>230</td>
+      <td>270 </td>
+      <td>500 </td>
+    </tr>
+  </table>
+
+<p> The rows correspond to smoking status - smoker or nonsmoker </p>
+
+<p> The columns correspond to gender - men or women</p>
+
+<p> The counts in the boxes are individuals who are in both.  39 individuals from the 500 are both a smoker and a man.  </p>
+
+<p> Totals along columns and rows are given</p>
+
+  <p> We saw this example in L04 - Percentages and Box Plots.  You computed conditional probabilities.</p>
+
+</section>
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example continued</h2>
+
+
+
+  <ul class="spaced">
+    <li>What percent of the people in the study are men?<br>
+      <span class="green fragment"> $P(\text{men}) = 230/500 = 0.46 = 46\%$</span>
+    <li>What percent of the people in the study are smokers?<br>
+              <span class="green fragment"> $P(\text{smoker}) = 76/500 = 0.152 = 15.2\%$</span>
+    <li>What percent of men in the study are smokers?<br>
+              <span class="green fragment"> $P(\text{smoker } | \text{ men}) = 39/230 = 0.17 = 17\%$</span>
+    <li>What percent of women in the study are smokers?<br>
+              <span class="green fragment"> $P(\text{smoker } | \text{ women}) = 37/270 = 0.137 = 13.7\%$</span>
+    <li>What percent of smokers in the study are women?<br>
+              <span class="green fragment"> $P(\text{women } | \text{ smoker}) = 37/76= 0.486 = 48.6\%$</span>
+      </ul>
+
+
+    </section>
+
+
+
+</section>
+
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li> Define conditional probability
+<li> Use the conditional probability formula
+<li> Apply the contitional probabily formula to independent and mutually exclusive events
+<li> Fill in missing values of contingency tables
+<li> Use contingency tables to compute conditional probabilities
+</ul>
+</p>
+
+<br>
+
+  <h2>Reading</h2>
+
+<p>  Textbook section 3.1: Terminology </p>
+
+<p> Textbook section 3.4: Contingency Tables </p>
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
