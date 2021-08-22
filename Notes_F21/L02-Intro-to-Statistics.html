@@ -1,0 +1,394 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 2mm; }
+    li.green { color: #008800   !important; }
+  </style>
+
+  <title>Random Sampling - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+	<h1>Random sampling</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Random sampling</h2>
+
+	<p>This lesson is about ways to create a random sample
+	from a population.</p>
+
+
+	<p>This topic is part of <b>experimental design</b>, which
+	  refers to the process <br/> of designing a statistical study so
+	  that the results will be meaningful.</p>
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Convenience sampling</h2>
+
+	<p>The easiest way to make a random sample is to use
+	   a sample that is easy to collect.</p>
+
+	<p>This is called <b>convenience sampling</b>.</p>
+
+	<ul class="spaced">
+	  <li> In order to study student preferences about their classes,<br/>
+	    I only interview students that are in my classes.
+
+	  <li> In order to measure the prices of soft drinks,
+	    I drive to the closest Wal-Mart and write down
+	    their prices.
+
+
+	    </ul>
+
+<p>Convenience sampling is also called <b>opportunity sampling</b>.
+
+      </section>
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Simple random sampling</h2>
+
+	<p>In simple random sampling, each member of the population
+	   has the same chance of being chosen.</p>
+
+	<p>Suppose we have a population of 50 students and
+	  we want to select 10.</p>
+
+	<img src="Figures/simple-0.png"
+	     alt="A single population of 50 individuals"/>
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Simple random sampling</h2>
+
+	<p>Here is one possible selection of 10 individuals.</p>
+
+	<img src="Figures/simple-1.png"
+	     alt="A single population of 50 individuals with 10 individuals randomly selected"/>
+
+	<p>There are many other choices of 10 individuals. <br/>The important point
+	  is that everyone had the same chance of being selected.</p>
+
+      </section>
+
+
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Methods for random sampling</h2>
+
+	<p>It is not possible to make random samples by
+	  choosing the sample yourself.<br/>
+	  You need to use a better method.</p>
+
+	<ul class="spaced">
+
+	  <li> Put each person's name on a piece of paper, place the
+	    papers in a bag or box, and select the appropriate number.
+
+	  <li> Use a computer or table to assign each person in the
+	  population a number between 1 and 100, and then select a set
+	  of numbers to get the right number of people in your sample.
+
+	  <li> Take a set of note cards. Mark some with an X and leave
+	    the rest blank.  Shuffle the note cards and give one to
+	    each person. The people with a marked card are the ones
+	    in the sample.
+
+	  <li> There are many other methods that will work, as well
+
+	</ul>
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Stratified sampling</h2>
+
+	<p>Because we don't control who is selected in a simple random
+	  sample,<br/> the sample will represent the <em>overall</em>
+	  population, but it may not represent<br/> any
+	  particular <em>subpopulation</em>.</p>
+
+	<p>If we select 400 Marshall students at random, we are not
+	likely to get 100 Freshman,<br/> 100 Sophomores, 100 Juniors, and
+	100 Seniors.</p>
+
+	<p><b>Stratified sampling</b> divides the population into groups
+	  <br/>
+	  and takes a random sample from each group.</p>
+
+	<img src="Figures/stratified.png" alt="A population with four groups: Freshman, Sophomores, Juniors, Seniors. A random sample is taken separately from each group."/>
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Cluster sampling</h2>
+
+	<p><b>Cluster sampling</b> is a different way to make a sample
+	when the population is divided into groups.</p>
+
+	<p>In cluster sampling, we select some of the groups, and then
+	  the sample consists of all the individuals who are in the selected
+	  groups.</p>
+
+	<p>For example, we might select 8 classes at Marshall and then
+	  interview all of the students in each of the classes.
+	  </p>
+
+      </section>
+
+
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Stratified vs. cluster <br/> sampling</h2>
+
+	<p>There is an important difference between stratified and
+	  cluster sampling.</p>
+
+	<ul class="spaced">
+
+	  <li> In <b>stratified sampling</b>, we take a separate
+	      random sample from every group.
+
+	    <ul class="fragment normal">
+
+	      <li class="green">This is most useful when we want to ensure that our
+		  sample contains a sufficient number of people from
+		each group.
+
+		<li class="green"> For example, a medical study might want to
+		include both women and men, or both old and young
+		people.
+
+		<li class="green"> A study at Marshall might want to include
+		students from all the colleges.
+	      </ul>
+
+	  <li> In <b>cluster sampling</b>, we select some of the
+	    groups, and the sample consists of every member of these
+	    groups.
+
+	    <ul class="normal fragment">
+
+	      <li class="green">This is most useful when the groups
+		are separated by time or distance.
+
+	      <li class="green">For example, we might want to
+		interview residents at several nursing homes. If it is
+		too difficult to travel to too many nursing homes, a
+		cluster sample might reduce our travel time.
+
+	      <li class="green">We need to ask if the groups selected are representative
+		of the overall population.
+	    </ul>
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+	<h2>Check your understanding</h2>
+
+	<p>Identify which type of sampling is being described.</p>
+
+	<ul>
+	  <li>20 Marshall students are selected for a survey by
+	    randomly choosing their names from the list of enrolled students.
+
+	    <ul class="fragment spaced">
+	      <li class="green">Assuming each student has the same chance of being selected, this is a simple random sample.
+	    </ul>
+
+	  <li>I measure student satisfaction with the cafeteria by
+	    going there one Tuesday and asking the people I see to
+	    complete a survey.
+
+	    <ul class="fragment spaced">
+	      <li class="green">This is a convenience sample.
+	    </ul>
+
+	    <li>The state studies elementary schools by sending a team
+	      to visit 15 different schools across the state. The team then
+	      evaluates the records of all students at each of the schools.
+
+	      <ul class="fragment spaced">
+		<li class="green">This is a cluster sample.
+	      </ul>
+
+
+	    <li>The state studies elementary schools by randomly
+	    selecting 10 students from every school in the state, and
+	    then evaluating the records of the selected students.
+
+	      <ul class="fragment spaced">
+		<li class="green">This is a stratified sample.
+	      </ul>
+
+
+	      </ul>
+
+      </section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+        <h2>Systematic sampling</h2>
+
+	<p>A different kind of sampling is often used for quality control.</p>
+
+	<p>Imagine that many items are being produced on an
+	  assembly line.
+
+	<p>In <b>systematic sampling</b> we select our sample items at a
+	fixed rate.</p>
+	<ul class="normal">
+
+	  <li>We may select every 100th item, or every 10,000th item.
+
+	  <li>We may select one item every half hour, or every hour,
+	  or every day.
+
+	</ul>
+
+	<p>For example, a soda factory may select every 5,000th bottle
+	  to inspect for quality control.
+
+	  <img src="Figures/pepsi.jpg"
+	       alt="Bottles of Mountain Dew on a PepsiCo bottling line"/>
+
+
+	</section>
+
+      <!-- -------------------------------- -->
+
+      <section class="left">
+        <h2>Multistage sampling</h2>
+
+	<p><b>Multistage sampling</b> uses a combination of several sampling
+	methods.</p>
+
+
+	<p>For example, if we want to study the WV school system,
+	  we might:
+	</p>
+
+	<ul>
+	  <li>First select 30 schools at random
+	  <li>Then select 10 classes from each of those schools at random
+	  <li>Then select all students from each of those classes
+	</ul>
+
+	<p>The field of experimental design studies the best ways
+	  to design these studies.
+	  </p>
+
+	</section>
+
+      <!-- -------------------------------- -->
+
+
+
+<!--
+      <section class="left">
+
+        <h2>Finish the lesson</h2>
+
+        <p>See the course website to locate this material in the textbook.</p>
+
+        <p>Complete the pre-class handout and bring it to class with you.</p>
+
+      </section>
+-->
+
+            <!-- ------------------------------------------------ -->
+      <section class="left">
+
+  <p>      <h2>Goals of this lesson</h2>
+        <ul>
+	  <li>Understand the role of random sampling in statistics
+	  <li>Define and identify convenience sampling
+	  <li>Define and identify simple random sampling, stratified
+	    sampling, and cluster sampling
+	  <li>Select ways to collect a simple random sample
+	  <li>Define and identify multistage sampling
+	  <li>Define and identify systematic sampling
+
+
+
+        </ul>
+      </p>
+<br>
+
+        <h2>Reading</h2>
+
+
+
+	<p>Textbook section 1.2: Data, Sampling, and Variation in Data and Sampling</p>
+
+	</section>
+
+
+
+    </div>
+  </div>
+  <script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
