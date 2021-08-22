@@ -1,0 +1,308 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Hypothesis Testing T-Test  - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Hypothesis Testing T-Test </h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+  </section>
+
+
+  <!-- -------------------------------- -->
+  <!-- -------------------------------- -->
+  <section class="left">
+<h2>Hypothesis Testing</h2>
+
+<p> When we don't know the population standard deviation <b>or</b> the sample size is small, we need to use the $t$-distribution
+
+<p> General process
+
+
+<ul class = "spaced">
+  <li> Identify the hypothesis you want to test.  <b>Null hypothesis</b> the two values are equal.  <b>Alternative hypothesis</b> the values are different $>$, $<$, or $\neq$.
+  <li> Identify the <b>level of significance</b> $\alpha$ you want to use.
+  <li> Convert the sample statistic into a $t$-value
+  <li> Identify the critical value $t_c$
+    <ul><li> Depends on degrees of freedom
+      <li> Depends on one-sided or two-sided test
+      </ul>
+      <li> Compare $t$ and $t_c$
+</ul>
+
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Two-sided Test </h2>
+
+<p> Two-sided test -- the alternative hypothesis is "not equal to".</p>
+
+<img src = "Figures/TDistribution_TwoSided.png"></img>
+
+
+
+  </section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Right-sided Test </h2>
+
+<p> One-sided test -- the alternative hypothesis is "greater than".</p>
+
+<img src = "Figures/TDistribution_Right.png"></img>
+
+
+
+  </section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Left-sided Test </h2>
+
+<p> One-sided test -- the alternative hypothesis is "less than".</p>
+
+<img src = "Figures/TDistribution_Left.png"></img>
+
+
+
+  </section>
+
+  <!-- -------------------------------- -->
+
+  <section class="left">
+  <h2>Check your understanding</h2>
+
+  <p>Make a conclusion for each hypothesis test. </p>
+
+  <ul>
+  <li> In a two-sided test, you compute $t = 3.018$ and $t_c = 2.262$
+
+  <ul class="fragment spaced">
+    <li class="green">Since $t > t_c$ for this two-sided test, we reject the null hypothesis.
+  </ul>
+
+  <li>In a left-sided test, you compute $t = -1.853$ and $t_c = 2.306$
+
+  <ul class="fragment spaced">
+    <li class="green">Since $t > -t_c$ for this left-sided test, we do not reject the null hypothesis.
+  </ul>
+
+  <li>In a left-sided test, you compute $t = -1.711$ and $t_c = 1.544$
+
+    <ul class="fragment spaced">
+  <li class="green">Since $t < -t_c$ for this left-sided test, we reject the null hypothesis.
+    </ul>
+
+
+  <li>In a right-sided test, you compute $t = 1.341$ and $t_c = 1.753$
+
+    <ul class="fragment spaced">
+  <li class="green">Since $t < t_c$ for this right-sided test, we do not reject the null hypothesis.
+    </ul>
+
+
+    </ul>
+
+  </section>
+
+
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+<p> The mean work week for engineers in a company is believed to be about 60 hours.  A newly hired engineer hopes that it's shorter.  The work week of 10 engineers from the company are
+  \[45 \quad 50 \quad 55 \quad 55 \quad 55 \quad 55 \quad 60 \quad 60 \quad 65\quad 70 \]
+Based on the data should the new engineer count on the mean work week to be shorter than 60 hours?
+
+<p> Use a level of significance $\alpha = 0.1$
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+
+<p> Null hypothesis: $H_0: \mu = 60$ hours
+
+<p> Alternative hypothesis: $H_1: \mu < 60$ hours
+
+<p> Compute the sample mean: $\overline{x} = 57$ hours
+
+<p> Compute the sample standard deviation: $s = 7.1492$ hours
+
+<p> Compute the $t$-value:
+  \[t = (57 - 60) / \left(\frac{7.1492}{\sqrt{10}}\right) = -1.3269 \]
+
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+<p> Compute the degrees of freedom: $df = 9$.
+
+
+
+<p> Note this is a one-sided (left) hypothesis test, since $H_1: \mu < 60$ hours
+
+<p> Identify the critical value: $t_c = 1.383$
+
+<p> Compare $t$ and $-t_c$ (for a left-sided test)
+  \[-1.3269 > -1.383 \]
+
+<p> Because the $t$ value is more than the critical value (more than $-t_c$) we do not reject the null hypothesis.
+
+<p> The data does not support the claim that the average work week at this company is less than 60 hours.
+
+</section>
+
+
+
+
+
+    <!-- -------------------------------- -->
+    <section class="left">
+    <h2>Example</h2>
+
+<p> It is believed that a stock price for a particular company will grow at a rate of $\$5$ per week.  An investor does not believe this claim.
+
+<p> The changes in stock price is recorded for ten weeks and are as follows
+  \[2 \quad 3 \quad 3 \quad 4 \quad 5 \quad 5 \quad 6 \quad 7\quad 8 \quad 10 \]
+
+<p> It is believed that the growth rate of the stock is normally distributed.
+
+<p> Perform a hypothesis test using a $5\%$ level of significance.
+
+</section>
+
+  <!-- -------------------------------- -->
+  <section class="left">
+  <h2>Example</h2>
+
+    <p> Null hypothesis: $H_0: \mu = 5$ dollars
+
+  <p> Alternative hypothesis: $H_1: \mu \neq 5$ dollars
+
+<p> Compute the sample mean $\overline{x} = 5.3$
+
+<p> Compute the sample standard deviation $s = 2.4967$
+
+<p> Compute the $t$-value
+    \[ t = (5.3 - 5)/ \left(\frac{2.4967}{\sqrt{10}}\right) = 0.380\]
+
+
+
+      </section>
+
+      <!-- -------------------------------- -->
+      <section class="left">
+<h2>Example</h2>
+
+<p> Compute the degrees of freedom: $df = 9$.
+
+  <p> Note this is a two-sided hypothesis test, since $H_1: \mu \neq 5$ dollars
+
+  <p> Identify the critical value: $t_c = 2.262$
+
+<p> Compare $t$ and $t_c$; for a two-sided test compare $t$ with $t_c$ and $-t_c$
+        \[-2.262 < 0.380 < 2.262 \]
+
+<p> Because the $t$ value is between $\pm t_c$ we do not reject the null hypothesis.
+
+<p> The data does support the claim that the average weekly growth rate of the stock is $\$5$.
+
+</section>
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li> Describe when to use the Student's t-distribution when performing a hypothesis test
+<li> Compute critical values, $t_c$
+<li> Perform hypothesis tests for the mean using the Student's t-distribution
+<li> Write hypothesis test conclusions specific to the scenario
+</ul>
+</p>
+
+<br>
+
+  <h2>Reading</h2>
+
+<p>  Textbook section 9.5: Additional Information and Full Hypotheses Test Examples </p>
+
+<p>  Textbook section 9.6: Hypothesis Testing of a Single Mean and Single Proportion </p>
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
