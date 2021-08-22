@@ -1,0 +1,311 @@
+<html>
+<head>
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/reveal.css">
+  <link rel="stylesheet"
+	href="http://science.marshall.edu/mummertc/reveal.js-3.8.0/css/theme/white.css">
+
+  <style type="text/css">
+    h1 { font-size: 48pt !important; }
+    h2 { font-size: 36pt !important; }
+    section.left { text-align: left !important;
+		   font-size: 18pt !important;
+		 }
+    ul.spaced li { margin-bottom: 1cm; }
+    ul.normal li { margin-bottom: 0; }
+    .green { color: #008800   !important; }
+
+    th { text-align: center !important; }
+
+    table.right tr td { text-align: right; }
+
+
+    p.source { font-size: 85%; }
+
+  </style>
+
+  <title>Normal Distribution - STA 150 Notes </title>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+	<h1>Normal Distribution</h1>
+	STA 150, Marshall University<br/>
+	Anna Mummert
+
+      </section>
+
+
+      <!-- -------------------------------- -->
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Continuous Random Variable</h2>
+
+<p>A continuous random variable is a random process that can produce any decimal number in a given range as an outcome. </p>
+
+<br>
+<p> Example
+
+<p> Select a random animal and record its weight
+
+<p> Select a random student and record their height</p>
+
+<br>
+<p> With continuous random variables, we don't talk about the probability of a single value, but the probability that an outcome is in a given interval of values.
+
+</section>
+
+  <!-- -------------------------------- -->
+<section class="left">
+<h2>Normal Distribution</h2>
+
+<p> The most common type of continuous random variable is called a normal distribution.
+
+<p> Normal distributions appear commonly in practice.
+
+<p> Normal distributions are unimodal (mound shape) and symmetric.
+  <ul> <li>This shape tells us the mean, median, and mode are all the same.
+</ul>
+
+<p>Normal distributions have other properties, which we'll learn about.
+
+
+<p> Caution: Other distributions can have the same shape (mound, symmetric), but are not normal distributions. (We'll use the t-distribution later in this class.)
+
+</section>
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Normal Distribution Graph </h2>
+
+<p> All normal distributions look the same if we measure the $x$-axis using standard deviations.
+
+<img src="Figures/Normal-Distributions-1.png" width="80%"></img>
+
+</section>
+
+<!-- -------------------------------- -->
+      <section class="left">
+	<h2>Normal Distribution Probability</h2>
+
+<p> We view the probability as the area of a certain region under the normal curve.
+
+<img src="Figures/Normal-Distributions-2.png" width="80%"></img>
+
+</section>
+
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+<p> Assume a continuous random variable $x$ has a normal distribution with mean $50$ and standard deviation $6$.</p>
+
+<p> $68\%$ of the values are between $50-6$ and $50+6$, so between $44$ and $56$
+<ul><li> The probability of selecting a random value between $44$ and $56$ is $68\%$
+</li></ul>
+</p>
+<p> $95\%$ of the values are between $50 - 2*6$ and $50 + 2*6$, so between $38$ and $62$
+  <ul><li> The probability of selecting a random value between $38$ and $62$ is $95\%$
+  </li></ul>
+</p>
+<p> $99.7\%$ of the values are between $50 - 3*6$ and $50 + 3*6$, so between $32$ and $68$
+  <ul><li> The probability of selecting a random value between $32$ and $68$ is $99.7\%$
+  </li></ul>
+</section>
+
+
+
+  <!-- -------------------------------- -->
+  <section class="left">
+	<h2>Example</h2>
+
+<p> Assume a continuous random variable $x$ has a normal distribution with mean $50$ and standard deviation $6$.</p>
+
+Find the probability that the value is between $38$ and $56$
+
+<img src="Figures/Normal-Distributions-Ex3.png" width="80%"></img>
+
+\[P(38 \leq x \leq 56) = 13.5 + 34 + 34 = 81.5\% \]
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+<p> Assume a continuous random variable $x$ has a normal distribution with mean $50$ and standard deviation $6$.</p>
+
+Find the probability that the value is more than one standard deviation from the mean
+
+<img src="Figures/Normal-Distributions-Ex1.png" width="50%"></img>
+
+<p> Caution! Be careful with the left and right tails, above and below 3 standard deviations.  Use subtraction.
+
+\[P(x \leq 44 \text{ or } x \geq 56) = 1 - 0.68 = 0.32 = 32\%\]
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Example</h2>
+
+<p> Assume a continuous random variable $x$ has a normal distribution with mean $50$ and standard deviation $6$.</p>
+
+Find the probability that the value is larger than $56$
+
+<img src="Figures/Normal-Distributions-Ex2.png" width="50%"></img>
+
+<p> Caution! Be careful with the left and right tails, above and below 3 standard deviations.  Use subtraction.
+
+<p> First compute probability that value is more than three standard deviations above mean (right tail only).  Use subtraction and divide by 2.
+  \[P(x \geq 68 ) = (100 - 99.7) / 2 = 0.15\% \]
+
+<p> Now use addition
+  \[P(x \geq 56) = 13.5 + 2.35 + 0.15 = 16\% \]
+</section>
+
+<!-- -------------------------------- -->
+
+<section class="left">
+<h2>Check your understanding</h2>
+
+<p>Assume a continuous random variable $x$ has a normal distribution with mean $12$ and standard deviation $2.5$.</p>
+
+<ul>
+<li>Find two values so that the probability of selecting a value between them is $68\%$.
+
+<ul class="fragment spaced">
+  <li class="green"> $9.5$ and $14.5$ -- within one standard deviation
+</ul>
+
+<li>Find two values so that the probability of selecting a value between them is $95\%$.
+
+<ul class="fragment spaced">
+  <li class="green">$7$ and $17$ -- within two standard deviations
+</ul>
+
+<li>Find two values so that the probability of selecting a value between them is $99.7\%$.
+
+  <ul class="fragment spaced">
+<li class="green">$4.5$ and $19.5$ -- within three standard deviations
+  </ul>
+
+  <li>True or false: the probability of selecting a value of $12$ or higher is $50\%$.
+
+    <ul class="fragment spaced">
+  <li class="green">True
+    </ul>
+
+  </ul>
+
+</section>
+
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Checking Claims </h2>
+
+<p> Assume a continuous random variable $x$ has a normal distribution with mean $50$ and standard deviation $6$.</p>
+
+
+<p> I select a random value, 41 from this distribution.</p>
+
+<p> How many standard deviations is 41 from the mean?
+  \[ \frac{41 - 50}{6} = -1.5\]
+41 is 1.5 standard deviations below the mean.
+</p>
+
+<br>
+<p> If I selected $3$ random values from this distribution and they all turned out to be $41$, would you be skeptical of the values of the mean and standard deviation?
+
+<p> A small, but significant, percentage of the values should be around $41$; it should be possible to randomly select $3$ of this value.  I would not be skeptical.
+</section>
+
+<!-- -------------------------------- -->
+<section class="left">
+<h2>Checking Claims </h2>
+
+<p> Assume a continuous random variable $x$ has a normal distribution with mean $50$ and standard deviation $6$.</p>
+
+
+<p> I select a random value, 74 from this distribution.</p>
+
+<p> How many standard deviations is 74 from the mean?
+  \[ \frac{74 - 50}{6} = 4\]
+74 is 4 standard deviations above the mean.
+</p>
+
+<br>
+<p> If I selected $3$ random values from this distribution and they all turned out to be $74$, would you be skeptical of the values of the mean and standard deviation?
+
+<p> It is very unlikely, though possible, to select a value of 74; it would be even more unlikely to select 3 such values.  I would be skeptical.
+</section>
+
+
+
+      <!-- -------------------------------- -->
+      <section class="left">
+	<h2>Goals of this lesson</h2>
+
+  <p>
+	<ul>
+<li> Define continuous random variable
+<li> Describe the shape of a normal distribution
+<li> Describe the importance of the mean and standard deviation for normal distributions
+<li> Compute probabilities from normal distributions using the approximate probabilities
+</ul>
+</p>
+
+<br>
+
+  <h2>Reading</h2>
+
+<p>  Textbook section 6.1: The Standard Normal Distribution </p>
+
+
+
+      </section>
+
+
+
+    </div>
+  </div>
+
+<script src="http://science.marshall.edu/mummertc/reveal.js-3.8.0/js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+	math: {
+	    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	    // pass other options into `MathJax.Hub.Config()`
+	},
+
+	dependencies: [
+	    { src: 'http://science.marshall.edu/mummertc/reveal.js-3.8.0/plugin/math/math.js', async: true }
+	],
+
+	center: false,
+	overview: true,
+	hash: true,
+	slideNumber: true,
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!--
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741556/
+
+
+
+-->
